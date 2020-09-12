@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// ROUTE SUPERADMIN
+Route::group(['prefix' => '/superadmin'], function (){
+
+    Route::get('/agenda', 'Api\SuperAdmin\AgendaController@index');
+    Route::get('/agenda/{id}', 'Api\SuperAdmin\AgendaController@detail');
+
+    Route::get('/arsip', function () {
+        return view('pages.superadmin.arsip.arsip');
+    });
 });

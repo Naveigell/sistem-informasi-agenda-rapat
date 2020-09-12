@@ -1,0 +1,35 @@
+body, html {
+    background: var(--color-body-primary);
+}
+
+.left-side-bar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 2;
+    background: white;
+    box-shadow: 1px 0px 3px 1px rgb(224, 225, 227);
+}
+
+.left-side-bar > span {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    /* background: red; */
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.left-side-bar .active {
+    font-weight: bold;
+    border-left: 4px solid;
+    border-color: var(--color-primary-dark);
+    background: var(--color-body-primary);
+    padding-left: 26px;
+}
+
+.left-side-bar > span:hover {
+    background: var(--color-body-primary);
+    cursor: pointer;
+}

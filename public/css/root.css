@@ -1,0 +1,12 @@
+:root {
+    --color-primary: rgb(243, 49, 85);
+    --color-primary-dark: #f33155;
+
+    --color-secondary: rgb(30, 124, 235);
+
+    --color-warning: rgb(222, 201, 89);
+
+    --color-black-primary: #2f323e;
+
+    --color-body-primary: rgb(237, 241, 245);
+}
