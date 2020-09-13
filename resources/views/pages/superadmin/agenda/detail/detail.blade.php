@@ -36,6 +36,7 @@
                     <th scope="col">No</th>
                     <th scope="col">Nama Peserta</th>
                     <th scope="col">Jabatan</th>
+                    <th scope="col">Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -43,16 +44,25 @@
                     <th scope="row">1</th>
                     <td>John Doe</td>
                     <td>Pimpinan Rapat</td>
+                    <td>
+                        <button class="btn btn-md button-secondary" type="button" name="button">Detail</button>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
                     <td>John Gonna Doe</td>
                     <td>Peserta</td>
+                    <td>
+                        <button class="btn btn-md button-secondary" type="button" name="button">Detail</button>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
                     <td>Bedford Jane Doe</td>
                     <td>Peserta</td>
+                    <td>
+                        <button class="btn btn-md button-secondary" type="button" name="button">Detail</button>
+                    </td>
                 </tr>
             </tbody>
         </table>

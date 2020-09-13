@@ -32,7 +32,7 @@
                     <td>Gedung Bapetnas, Lt 4</td>
                     <td class="col-md-3">
                         <a href="/superadmin/agenda/1" class="btn btn-md button-secondary" type="button" name="button">Detail</a>
-                        <button class="btn btn-md button-warning" type="button" name="button">Edit</button>
+                        <a href="/superadmin/agenda/1/edit" class="btn btn-md button-warning" type="button" name="button">Edit</a>
                         <button class="btn btn-md button-primary" type="button" name="button">Arsipkan</button>
                     </td>
                 </tr>
@@ -43,8 +43,8 @@
                     <td>19.00 - 20.00 WITA</td>
                     <td>Aula Gedung Satlantas</td>
                     <td class="col-md-3">
-                        <button class="btn btn-md button-secondary" type="button" name="button">Detail</button>
-                        <button class="btn btn-md button-warning" type="button" name="button">Edit</button>
+                        <a href="/superadmin/agenda/1" class="btn btn-md button-secondary" type="button" name="button">Detail</a>
+                        <a href="/superadmin/agenda/1/edit" class="btn btn-md button-warning" type="button" name="button">Edit</a>
                         <button class="btn btn-md button-primary" type="button" name="button">Arsipkan</button>
                     </td>
                 </tr>
@@ -55,8 +55,8 @@
                     <td>17.00 - 18.00 WITA</td>
                     <td>Di tengah Lapangan Puputan Renon</td>
                     <td class="col-md-3">
-                        <button class="btn btn-md button-secondary" type="button" name="button">Detail</button>
-                        <button class="btn btn-md button-warning" type="button" name="button">Edit</button>
+                        <a href="/superadmin/agenda/1" class="btn btn-md button-secondary" type="button" name="button">Detail</a>
+                        <a href="/superadmin/agenda/1/edit" class="btn btn-md button-warning" type="button" name="button">Edit</a>
                         <button class="btn btn-md button-primary" type="button" name="button">Arsipkan</button>
                     </td>
                 </tr>

@@ -33,6 +33,16 @@ body, html {
     color: white;
 }
 
+.button-success, .button-success:hover {
+    background: var(--color-success);
+    /* border-radius: 3px;
+    border: none;
+    padding: 7px 18px; */
+    outline: none;
+    color: white;
+}
+
+
 .body-section {
     background: white;
     border-radius: 3px;

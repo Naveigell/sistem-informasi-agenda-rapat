@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ url('/css/page/layouts/header.css') }}">
     <link rel="stylesheet" href="{{ url('/css/page/layouts/dashboard.css') }}">
     <link rel="stylesheet" href="{{ url('/css/page/layouts/container.css') }}">
-    @yield('styles')
+  @yield('styles')
   </head>
   <body>
       <header class="header">
@@ -46,15 +46,15 @@
           </span>
           <span>
               <i class="glyphicon glyphicon-file" style="margin-right: 10px;"></i>
-              Blank Page
+              Profile
           </span>
           <span>
               <i class="glyphicon glyphicon-asterisk" style="margin-right: 10px;"></i>
-              Error 404
+              Pengaturan
           </span>
       </div>
       <div class="container">
-          @yield('body')
+      @yield('body')
       </div>
   </body>
 </html>

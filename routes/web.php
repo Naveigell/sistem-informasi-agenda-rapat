@@ -16,8 +16,12 @@ use Illuminate\Support\Facades\Route;
 // ROUTE SUPERADMIN
 Route::group(['prefix' => '/superadmin'], function (){
 
-    Route::get('/agenda', 'Api\SuperAdmin\AgendaController@index');
-    Route::get('/agenda/{id}', 'Api\SuperAdmin\AgendaController@detail');
+    Route::get('/agenda', 'Api\SuperAdmin\AgendaController@showView');
+    Route::get('/agenda/insert', 'Api\SuperAdmin\AgendaController@insertView');
+    Route::get('/agenda/{id}', 'Api\SuperAdmin\AgendaController@detailView');
+    Route::get('/agenda/{id}/edit', 'Api\SuperAdmin\AgendaController@editView');
+
+    Route::get('/profile', 'Api\SuperAdmin\ProfileController@showView');
 
     Route::get('/arsip', function () {
         return view('pages.superadmin.arsip.arsip');
