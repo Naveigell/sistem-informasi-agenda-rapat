@@ -5,11 +5,9 @@
 @endsection
 
 @section('body')
-
     <div class="body-section">
         <h4 style="font-weight: bold;">Agenda Rapat</h4>
     </div>
-
     <div class="body-section">
         <h2>List Agenda Rapat</h2>
         <table style="margin-top: 30px; font-size: 15px;" class="table ">
@@ -62,5 +60,6 @@
                 </tr>
             </tbody>
         </table>
+        <button class="btn btn-md button-success" type="button" name="button">Tambah Agenda Baru</button>
     </div>
 @endsection

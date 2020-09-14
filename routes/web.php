@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function (){
+    return view('login');
+});
+
 // ROUTE SUPERADMIN
 Route::group(['prefix' => '/superadmin'], function (){
 
@@ -20,6 +24,11 @@ Route::group(['prefix' => '/superadmin'], function (){
     Route::get('/agenda/insert', 'Api\SuperAdmin\AgendaController@insertView');
     Route::get('/agenda/{id}', 'Api\SuperAdmin\AgendaController@detailView');
     Route::get('/agenda/{id}/edit', 'Api\SuperAdmin\AgendaController@editView');
+
+    Route::get('/anggota', 'Api\SuperAdmin\AnggotaController@showView');
+    Route::get('/anggota/insert', 'Api\SuperAdmin\AnggotaController@insertView');
+    Route::get('/anggota/{id}', 'Api\SuperAdmin\AnggotaController@detailView');
+    Route::get('/anggota/{id}/edit', 'Api\SuperAdmin\AnggotaController@editView');
 
     Route::get('/profile', 'Api\SuperAdmin\ProfileController@showView');
 
