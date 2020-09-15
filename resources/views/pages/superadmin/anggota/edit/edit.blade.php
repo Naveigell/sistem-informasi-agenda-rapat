@@ -30,7 +30,7 @@
             <label class="col-sm-2">Foto Profil</label>
             <div class="col-sm-2 image-upload-container">
                 <div class="image-upload">
-                    <img class="form-controlf" src="{{ url('/img/default/avatar.png') }}" alt="">
+                    <img class="" src="{{ url('/img/default/avatar.png') }}" alt="">
                     <input type="file" id="image-file-input" accept="image/png, image/jpg, image/jpeg">
                     <button id="image-file-input-button">Ganti Foto</button>
                 </div>

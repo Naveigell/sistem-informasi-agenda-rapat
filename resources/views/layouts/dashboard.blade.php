@@ -41,15 +41,19 @@
               Arsip
           </span>
           <span class="active">
-              <i class="glyphicon glyphicon-magnet" style="margin-right: 10px;"></i>
+              <i class="glyphicon glyphicon-calendar" style="margin-right: 10px;"></i>
               Agenda
           </span>
           <span>
               <i class="glyphicon glyphicon-file" style="margin-right: 10px;"></i>
-              Profile
+              Surat
           </span>
           <span>
-              <i class="glyphicon glyphicon-asterisk" style="margin-right: 10px;"></i>
+              <i class="glyphicon glyphicon-bell" style="margin-right: 10px;"></i>
+              Notifikasi
+          </span>
+          <span>
+              <i class="glyphicon glyphicon-cog" style="margin-right: 10px;"></i>
               Pengaturan
           </span>
       </div>

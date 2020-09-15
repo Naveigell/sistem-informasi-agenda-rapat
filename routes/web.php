@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function (){
-    return view('login');
-});
-
 // ROUTE SUPERADMIN
 Route::group(['prefix' => '/superadmin'], function (){
+
+    Route::get('/login', function (){
+        return view('login');
+    });
 
     Route::get('/agenda', 'Api\SuperAdmin\AgendaController@showView');
     Route::get('/agenda/insert', 'Api\SuperAdmin\AgendaController@insertView');
@@ -31,6 +31,8 @@ Route::group(['prefix' => '/superadmin'], function (){
     Route::get('/anggota/{id}/edit', 'Api\SuperAdmin\AnggotaController@editView');
 
     Route::get('/profile', 'Api\SuperAdmin\ProfileController@showView');
+
+    Route::get('/pengaturan', 'Api\SuperAdmin\SettingController@showView');
 
     Route::get('/arsip', function () {
         return view('pages.superadmin.arsip.arsip');

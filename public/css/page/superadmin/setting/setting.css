@@ -1,0 +1,54 @@
+
+.body-section-independent {
+    background: white;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 4px var(--color-body-primary);
+}
+
+.image-upload-container {
+    height: 100%;
+}
+
+.image-upload {
+    background: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 30px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.account-information-container {
+    margin: 30px 10px;
+}
+
+.image-upload > img {
+    width: 200px;
+    height: 200px;
+    border-radius: 3px;
+}
+
+#image-file-input-button {
+    margin-top: 30px;
+    width: 200px;
+    height: 30px;
+    outline: none;
+    color: #555;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    background: white;
+}
+
+.upload-image-information {
+    width: 200px;
+    line-height: 18px;
+    font-size: 12px;
+    margin-top: 10px;
+    color: #a9a9a9;
+}
+
+#image-file-input {
+    display: none;
+}
