@@ -88,6 +88,6 @@
 
     <div class="body-section">
         <button class="button-secondary btn btn-md">Kembali</button>
-        <button class="button-success btn btn-md"><i class="glyphicon glyphicon-print"></i> &nbsp Print</button>
+        <button class="button-success btn btn-md"><i class="glyphicon glyphicon-print"></i> &nbsp Lihat dan Print</button>
     </div>
 @endsection
