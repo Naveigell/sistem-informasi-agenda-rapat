@@ -13,12 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function (){
+   return redirect()->to('/superadmin/agenda');
+});
+
 // ROUTE SUPERADMIN
 Route::group(['prefix' => '/superadmin'], function (){
 
     Route::get('/login', function (){
         return view('login');
     });
+
+    Route::get('/surat', 'Api\SuperAdmin\SuratController@showView');
+    Route::get('/surat/insert', 'Api\SuperAdmin\SuratController@insertView');
+    Route::get('/surat/{id}', 'Api\SuperAdmin\SuratController@detailView');
+    Route::get('/surat/{id}/edit', 'Api\SuperAdmin\SuratController@editView');
 
     Route::get('/agenda', 'Api\SuperAdmin\AgendaController@showView');
     Route::get('/agenda/insert', 'Api\SuperAdmin\AgendaController@insertView');

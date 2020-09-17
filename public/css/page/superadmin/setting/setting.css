@@ -41,6 +41,10 @@
     background: white;
 }
 
+#image-file-input-button:hover {
+    background: #f9f9f9;
+}
+
 .upload-image-information {
     width: 200px;
     line-height: 18px;

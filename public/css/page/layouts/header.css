@@ -24,6 +24,14 @@
     background: #212121;
 }
 
+.dropdown-container {
+    display: none;
+}
+
+.header > .header-account:hover .dropdown-container {
+    display: block;
+}
+
 .header > .header-account > img {
     width: 40px;
     height: 40px;
@@ -41,14 +49,29 @@
     width: 100%;
     height: 100px;
     position: absolute;
-    background: blue;
     top: 60px;
 }
 
 .header-account-option-container {
     width: 250px;
-    height: 150px;
-    background: green;
+    /*height: 50px;*/
+    background: #ddd;
+    /*box-shadow: 1px 0px 3px 1px rgb(224, 225, 227);*/
+    /*padding-top: 5px;*/
+    /*padding-bottom: 5px;*/
     position: absolute;
     right: 0;
+}
+
+.header-account-option-container > button {
+    width: 100%;
+    padding: 7px 0;
+    border: none;
+    background: #fff;
+    outline: none;
+    color: black;
+}
+
+.dropdown-container {
+    right: 10px;
 }

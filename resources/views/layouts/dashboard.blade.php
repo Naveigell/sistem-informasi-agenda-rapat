@@ -17,11 +17,11 @@
               <img src="{{ url('/img/default/avatar.png') }}" alt="">
               <span class="header-account-username">Avataaars</span>
               <i style="margin-right: 10px; width: 17px; height: 17px;" class="glyphicon glyphicon-cog"></i>
-              <div class="header-account-option" style="display: none;">
+              <div class="header-account-option" style="">
                   <div class="header-account-option-container">
-                      <button class="button-primary" type="button" name="button">
-                          Logout
-                      </button>
+                      <ul class="dropdown-menu dropdown-container">
+                          <li><a href="#">Logout</a></li>
+                      </ul>
                   </div>
               </div>
           </div>

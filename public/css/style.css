@@ -50,6 +50,10 @@ body, html {
     padding: 15px 40px;
 }
 
+.body-section:last-child {
+    margin-bottom: 19px;
+}
+
 .body-section:nth-child(1n + 2) {
     margin-top: 19px;
 }

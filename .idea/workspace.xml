@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bb49978-79e2-481d-8765-ba3cde3e3a66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/page/superadmin/setting/setting.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/setting/setting.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sistem-informasi-agenda-rapat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sistem-informasi-agenda-rapat.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/page/layouts/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/page/layouts/dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/page/layouts/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/page/layouts/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/page/superadmin/setting/setting.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/page/superadmin/setting/setting.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/edit/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/edit/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +40,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -64,7 +61,9 @@
       <workItem from="1600088215598" duration="591000" />
       <workItem from="1600091326321" duration="18000" />
       <workItem from="1600155133161" duration="2329000" />
-      <workItem from="1600169720303" duration="2807000" />
+      <workItem from="1600169720303" duration="5811000" />
+      <workItem from="1600315576090" duration="6391000" />
+      <workItem from="1600331757122" duration="1023000" />
     </task>
     <servers />
   </component>
@@ -84,21 +83,21 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="489" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1600086053122" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1600155752916">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1600321495982">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1600155752916" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1600088319507">
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1600321495982" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1600172864825">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600088319507" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600172864825" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1600171669349">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1600171669349" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600170045563">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600319444461">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1600170045563" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1600319444461" />
   </component>
 </project>
