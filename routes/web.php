@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\File;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function (){
-   return redirect()->to('/superadmin/agenda');
+//   return redirect()->to('/superadmin/agenda');
 });
 
 // ROUTE SUPERADMIN

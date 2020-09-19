@@ -17,13 +17,14 @@ class CreateAgendaRapatTable extends Migration
             Schema::create('agenda_rapat', function (Blueprint $table) {
                 $table->bigIncrements('id_rapat');
                 $table->unsignedBigInteger('rapat_id_pimpinan_rapat');
-                $table->unsignedBigInteger('rapat_id_nomor_surat');
+                $table->string('rapat_id_nomor_surat')->unique();
 
                 $table->index('rapat_id_pimpinan_rapat');
                 $table->index('rapat_id_nomor_surat');
 
                 $table->string('perihal_rapat', 40);
-                $table->dateTime('waktu_rapat');
+                $table->date('jadwal_rapat');
+                $table->time('waktu_rapat');
                 $table->string('ruangan_rapat');
                 $table->timestamps();
 

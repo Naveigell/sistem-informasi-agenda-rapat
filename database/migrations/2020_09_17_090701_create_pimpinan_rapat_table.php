@@ -19,8 +19,10 @@ class CreatePimpinanRapatTable extends Migration
                 $table->string('nama_pimpinan');
                 $table->string('jabatan');
                 $table->enum('jenis_kelamin', ['Laki - laki', 'Perempuan']);
-                $table->string('no_telepon', 17);
+                $table->string('no_telepon', 17)->unique();
                 $table->timestamps();
+
+                $table->index('no_telepon');
             });
         }
     }

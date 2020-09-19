@@ -15,11 +15,13 @@ class CreateSuratRapatTable extends Migration
     {
         if (!Schema::hasTable('surat_rapat')) {
             Schema::create('surat_rapat', function (Blueprint $table) {
-                $table->bigIncrements('id_nomor_surat');
-                $table->string('perihal_surat', 40);
-                $table->string('tujuan_surat', 40);
-                $table->string('pengirim_surat', 40);
-                $table->dateTime('tanggal_surat');
+                $table->string('id_nomor_surat')->primary();
+                $table->string('perihal_surat', 120);
+                $table->string('tujuan_surat', 120);
+                $table->text('isi_surat');
+                $table->string('jabatan_pengirim', 70);
+                $table->string('pengirim_surat', 70);
+                $table->date('tanggal_surat');
                 $table->timestamps();
             });
         }

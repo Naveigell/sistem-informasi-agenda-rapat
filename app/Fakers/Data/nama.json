@@ -1,0 +1,96 @@
+{
+    "nama": {
+        "pria": [
+            "Abichandra", "Abimana", "Abimanyu", "Abinaya", "Abyasa", "Adhi", "Adika", "Adinata", "Adipramana", "Aditya", "Adiwangsa", "Agam",
+            "Agnibrata", "Agung", "Aji", "Andaru", "Andi", "Angkasa", "Apta", "Aradhana", "Ardhi", "Ardiyanto", "Arga", "Arief", "Arjanta",
+            "Arya", "Asmaralaya", "Astaguna", "Aswangga",
+
+            "Bagas", "Bagaskoro", "Bajradaka", "Bakti", "Bamantara", "Bambang", "Banyu", "Baskoro", "Basuki", "Baswara", "Batara", "Bayu", 	"Bhagawanta", "Bhanu", "Bimo", "Birawa", "Bisma", "Brahma", "Bramantya", "Brawijaya", "Buana", "Budi", "Budiono",
+
+            "Cakra", "Cakrawala", "Candra", "Cipta",
+
+            "Damar", "Daniswara", "Danurdara", "Darsa", "Dewangga", "Dharma", "Dipa", "Dimas", "Dirga",
+
+            "Edi", "Endaru", "Estu", "Endang",
+
+            "Fadh", "Fadhly", "Fajar",
+
+            "Gadhing", "Ganendra", "Gardara", "Gentala", "Galih", "Ganesh", "Gibran", "Gilang", "Guinandra", "Gumelar", "Gunawan",
+            "Guntur", "Guritno", "Gusti",
+
+            "Hadi", "Hakim", "Halim", "Hamdan", "Hanafi", "Handaru", "Hapsari", "Hardana", "Haribawa", "Haris", "Harjita", "Hartadi",
+            "Hartanto", "Haryanto", "Hasta", "Hendro", "Herdian", "Herjuno", "Henry", "Hery",
+
+            "Ihsan", "Indra", "Ismoyono",
+
+            "Jamal", "Janu", "Jati", "Jatmika", "Jaya", "Jenaka", "Jenggala", "Jiwa", "Joko", "Jumanta", "Jumantara",
+
+            "Kala", "Kamajaya", "Kamandaka", "Karisma", "Karno", "Karunia", "Kawindra", "Kresna",
+
+            "Lakeswara", "Langit", "Lasmana", "Leksana", "Lesmana", "Luthfi",
+
+            "Madya", "Madyana", "Mahadana", "Mahadri", "Mahajana", "Mahapraja", "Mahaprana", "Mahardika", "Mahatma", "Mahendra", "Malik", 	"Manggala", "Mardhi", "Margi", "Mulyadi",
+
+            "Naresh", "Nareswara", "Naufal", "Nugraha", "Nusantara",
+
+            "Panca", "Perdana", "Perkasa", "Praba", "Pradigta", "Pradipto", "Pradnyana", "Pramana", "Pramuditha", "Pramudya", "Pranadipa", 	"Pranawa", "Prasaja", "Prasetyo", "Putra",
+
+            "Raden", "Raditya", "Rahardian", "Raharja", "Raka", "Rama", "Randika", "Rangga", "Respati", "Reswara", "Reza ", "Rezvan", "Ricky", 	"Rudi",
+
+            "Sadana", "Sakti", "Samudra", "Santoso", "Satria", "Satriya", "Satya", "Sigit", "Siswanto", "Sobiyanto", "Sudiro", "Sugiarto", 	"Surya", "Suryana", "Susilo",
+
+            "Tamawijaya", "Tegar", "Teja", "Tirta", "Tohpati", "Tulus",
+
+            "Ulung",
+
+            "Wardana", "Wajendra", "Wibisana", "Wibowo", "Widayaka", "Widura", "Widodo", "Wijaya", "Wirya",
+
+            "Yoga", "Yuda", "Yudayana"
+        ],
+        "wanita": [
+            "Adiratna", "Adriani", "Airani", "Amanda", "Anatari", "Anindya", "Anjani", "April", "Arkadewi", "Aruna", "Arsyana", "Asri",
+            "Ayu", "Ayudisha",
+
+            "Bandiani", "Banurasmi", "Basagita", "Batari", "Binar", "Bintang", "Bratarini", "Bulan",
+
+            "Cahaya", "Calya", "Candramaya", "Cempaka", "Citra", "Citta", "Cyntia",
+
+            "Danastri", "Danurdara", "Dhatu", "Diajeng", "Dianti", "Diatmika", "Ditya", "Dwi",
+
+            "Elok", "Erina", "Estiana",
+
+            "Fitri",
+
+            "Gadis", "Gahyaka", "Gantari", "Garini", "Gayatri", "Gema", "Gemani", "Gemintang", "Gempita", "Genta", "Ginanita", "Gyandra",
+
+            "Haira", "Hanasta", "Hanna", "Harini", "Hasana", "Hasya", "Hayu",
+
+            "Ika", "Ina", "Indah", "Indira", "Indri", "Indriaya", "Intan", "Istari", "Isthika", "Isty", "Iswari",
+
+            "Jayanti", "Jelita", "Jenar", "Juwita",
+
+            "Kahyang", "Kamala", "Kana", "Kani", "Kanista", "Karina", "Karmika", "Kartana", "Kasidya", "Kasih", "Kasyaira", "Kayshila",
+            "Keinan", "Kemala", "Kencana", "Keswari", "Kila", "Kinnas", "Kirana",
+
+            "Laksita", "Laksmi", "Lalita", "Lanita", "Laras", "Larasati", "Lasmaya", "Lawana", "Laya", "Lelana", "Lestari", "Lestia", "Lika", 		"Limar", "Lily", "Lingga", "Listia", "Listu", "Lituhayu", "Lukita",
+
+            "Mada", "Madaharsa", "Madana", "Madarsana", "Mahadewi", "Maharani", "Mahawirya", "Maktika", "Malya", "Manda", "Manika", "Mataya", 		"Maya", "Mega", "Megananda", "Melati", "Mentari", "Mirah", "Miratussany", "Mirtra", "Mustika",
+
+            "Nada", "Nadia", "Nadindra", "Naeswari", "Nala", "Nanda", "Nara", "Nararya", "Narasnama", "Nata", "Nawa", "Nawang", "Ndari", 			"Nehan", "Nidya", "Ningrum", "Ningsih", "Nirmala", "Numatya",
+
+            "Padmana", "Paramastri", "Paramita", "Parmadita", "Pawana", "Permata", "Pertiwi", "Pramata", "Pramidita", "Pratista", "Puri", 			"Purnama", "Puspa", "Puspita", "Putri",
+
+            "Radmila", "Rahmi", "Rajini", "Rananta", "Rani", "Ranupatma", "Rara", "Rasmi", "Ratih", "Ratimaya", "Ratna", "Ratri", "Ratu", 			"Rawika", "Rembulan", "Rosa",
+
+            "Sada", "Saktika", "Sakya", "Samada", "Saraswati", "Sasi", "Sasmaya", "Sekar", "Septha", "Seta", "Sitaresmi", "Suci", "Sukma", 			"Swasti",
+
+            "Tanya", "Tarasari", "Tisna", "Tiwi", "Tri", "Tyas",
+
+            "Utami", "Utari",
+
+            "Wangi", "Wasana", "Waskita", "Wening", "Widati", "Widhiani", "Widi", "Widia", "Widuri", "Wikasita", "Wiyana", "Wulan", 		"Wulandari", "Wuri",
+
+            "Yanti", "Yatiwara", "Yatna", "Yetri", "Yulianti", "Yuni"
+        ]
+    }
+}

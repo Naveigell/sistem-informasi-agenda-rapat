@@ -1,0 +1,20 @@
+{
+    "surat": {
+        "perihal": [
+            "Permohonan tenaga kerja", "Pengiriman rak buku", "Penataran kebahasan", "Permohonan Izin Mengajar", "Melelangkan Barang",
+            "Memohon Izin Menggunakan Auditorium", "Pengusulan calon pegawai", "Pengusulan kenaikan tingkat", "Panggilan kerja",
+            "Pengiriman Daftar Buku", "Undangan Rapat Panitia BAPPEDA", "Undangan Rapat", "Permohonan Kenaikan Kelas", "Permohonan Studi Banding",
+            "Pengusulan pengangkatan sekretaris"
+        ],
+        "tujuan": [
+            "Orang tua / Wali Murid Kelas XI , XII, XII SMA Bakti Mulya Jakarta", "Dinas Pertamanan dan Tata Kota Kota Pekalongan",
+            "Pimpinan PT. Angkasa Raya Jl. Ahmad Yani No 879 Bengkulu", "Kepala Dinas Pendidikan Kota Semarang", "Bapak/Ibu Orang tua/Wali murid",
+            "CEO PT. Amarta Jaya", "Seluruh Guru Kelas XII SMA Negeri 1 Kota Tegal", "Seluruh karyawan PT. Wijaya Kusuma Wijaya",
+            "Bapak Presiden Beserta Jajarannya", "Bapak Penatua", "Ketua Panitia Lomba"
+        ],
+        "jabatan_pengirim": [
+            "Graha Medika", "Kepala Sekolah", "Direktur Utama PT. Surya Kencana", "Pimpinan PT. Makmur Jaya Abadi", "An.CAMAT PEKANSARI",
+            "Pimpinan PT. Aunila", "Ketua OSIS SMP Negeri 2 Pekanbaru", "Kepala Dinas Pertamanan dan Tata Kota Pemerintah Kota Pekalongan"
+        ]
+    }
+}
