@@ -3,6 +3,8 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\ValidationException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -48,8 +50,13 @@ class Handler extends ExceptionHandler
      *
      * @throws \Throwable
      */
-    public function render($request, Throwable $exception)
-    {
+    public function render($request, Throwable $exception) {
+
+        // if validation error
+        if ($exception instanceof ValidationException) {
+            return back()->withInput($request->all())->withErrors($exception->validator->getMessageBag());
+        }
+
         return parent::render($request, $exception);
     }
 }

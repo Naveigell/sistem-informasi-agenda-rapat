@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,15 +15,22 @@ use Illuminate\Support\Facades\File;
 */
 
 Route::get('/', function (){
-//   return redirect()->to('/superadmin/agenda');
+    var_dump(auth('user')->id());
+
+//    return redirect()->to('/superadmin/agenda');
+});
+
+Route::get('/superadmin/login', function (){
+    return view('login');
+});
+
+// API ROUTE
+Route::group(['prefix' => '/api'], function (){
+    Route::post('/login', 'Api\SuperAdmin\UserController@login');
 });
 
 // ROUTE SUPERADMIN
-Route::group(['prefix' => '/superadmin'], function (){
-
-    Route::get('/login', function (){
-        return view('login');
-    });
+Route::group(['prefix' => '/superadmin', 'middleware' => 'user'], function (){
 
     Route::get('/surat', 'Api\SuperAdmin\SuratController@showView');
     Route::get('/surat/insert', 'Api\SuperAdmin\SuratController@insertView');

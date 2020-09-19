@@ -11,12 +11,13 @@
       <div class="login-page-background">
           <div class="login-container" >
               <form class="login-form" method="post" action="/api/login">
+                  @csrf
                   <h2>Account Login</h2>
                   <label>Email</label>
-                  <input id="email-input" type="text" placeholder="johndoe@microservice.com"/>
+                  <input id="email-input" name="email" value="{{ old('email') }}" type="text" placeholder="johndoe@microservice.com"/>
                   <br/><br/>
                   <label>Password</label>
-                  <input id="password-input" type="password" placeholder="*****"/> <br/><br/>
+                  <input id="password-input" name="password" value="{{ old('password') }}" type="password" placeholder="*****"/> <br/><br/>
                   <div class="display">
                       <div class="left-display">
                           <input type="checkbox"/>
@@ -26,8 +27,12 @@
                           <a href="forget">Lupa Password?</a>
                       </div>
                   </div>
-                  <span class="error-message">Akun tidak ditemukan</span>
-                  <button id="login-button" type="button" class="button-primary">
+                  @if($errors->has('email'))
+                      <span class="error-message">{{ $errors->first('email') }}</span>
+                  @elseif($errors->has('password'))
+                      <span class="error-message">{{ $errors->first('password') }}</span>
+                  @endif
+                  <button id="login-button" type="submit" class="button-primary">
                       Login
                   </button>
               </form>
