@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Rapat;
+namespace App\Models\Seeder;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -39,7 +39,7 @@ class UserSeeder extends Seeder {
             $email = strtolower(str_replace(' ', '', $nama.rand(0, 9999)."@".$this->random($prefix)));
 
             $user->insertOrIgnore([
-                'username'      => $nama,
+                'username'      => strtolower($nama),
                 'email'         => $email,
                 'password'      => Hash::make('123456'),
                 'remember_token'=> Str::random(60),

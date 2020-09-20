@@ -57,3 +57,10 @@ body, html {
 .body-section:nth-child(1n + 2) {
     margin-top: 19px;
 }
+
+.error-message {
+    display: block;
+    margin-top: 18px;
+    font-size: 14px;
+    color: var(--color-primary-dark);
+}

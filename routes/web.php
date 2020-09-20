@@ -28,6 +28,9 @@ Route::get('/logout', 'UserController@logout');
 // API ROUTE
 Route::group(['prefix' => '/api'], function (){
     Route::post('/login', 'UserController@login');
+
+    Route::post('/superadmin/agenda/insert', 'Api\SuperAdmin\AgendaController@insert');
+    Route::post('/superadmin/agenda/update', 'Api\SuperAdmin\AgendaController@update');
 });
 
 // ROUTE SUPERADMIN
@@ -38,7 +41,7 @@ Route::group(['prefix' => '/superadmin', 'middleware' => 'user'], function (){
     Route::get('/surat/{id}', 'Api\SuperAdmin\SuratController@detailView');
     Route::get('/surat/{id}/edit', 'Api\SuperAdmin\SuratController@editView');
 
-    Route::get('/agenda', 'Api\SuperAdmin\AgendaController@showView');
+    Route::get('/agenda', 'Api\SuperAdmin\AgendaController@showView')->middleware('remove.cache');
     Route::get('/agenda/insert', 'Api\SuperAdmin\AgendaController@insertView');
     Route::get('/agenda/{id}', 'Api\SuperAdmin\AgendaController@detailView');
     Route::get('/agenda/{id}/edit', 'Api\SuperAdmin\AgendaController@editView');

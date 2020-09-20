@@ -2,25 +2,26 @@
 
 @section('styles')
     <link rel="stylesheet" href="{{ url('/css/page/superadmin/agenda/detail.css') }}">
+    <link rel="stylesheet" href="{{ url('/js/data-tables/datatables.min.css') }}">
 @endsection
 
 @section('body')
     <div class="body-section">
-        <h2>Rapat Tentang Penyusunan Laporan Keuangan Semester I</h2>
+        <h2>Rapat Perihal {{ $data->perihal_rapat }}</h2>
     </div>
 
     <div class="body-section-container">
         <div class="body-section">
             <h4>Tanggal</h4>
-            <span>12 Januari 2020</span>
+            <span>{{ $data->jadwal_rapat }}</span>
         </div>
         <div class="body-section">
             <h4>Waktu</h4>
-            <span>19.00 - 20.00 WITA</span>
+            <span>{{ date('H.i', strtotime($data->waktu_rapat)) }} WITA</span>
         </div>
         <div class="body-section">
             <h4>Ruang Rapat</h4>
-            <span>Gedung Bapetnas, Lt 4</span>
+            <span>{{ $data->ruangan_rapat }}</span>
         </div>
         <div class="body-section">
             <h4>Jumlah peserta</h4>
@@ -30,7 +31,8 @@
 
     <div class="body-section">
         <h4>List Peserta Rapat</h4>
-        <table style="margin-top: 30px; font-size: 15px;" class="table ">
+        <br/>
+        <table id="peserta-table" style="margin-top: 30px; font-size: 15px;" class="table ">
             <thead>
                 <tr>
                     <th scope="col">No</th>
@@ -67,4 +69,12 @@
             </tbody>
         </table>
     </div>
+
+    <script src="{{ url('js/jquery.min.js') }}"></script>
+    <script src="{{ url('js/data-tables/datatables.min.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            $('#peserta-table').DataTable();
+        });
+    </script>
 @endsection

@@ -15,7 +15,7 @@
       <header class="header">
           <div class="header-account">
               <img src="{{ url('/img/default/avatar.png') }}" alt="">
-              <span class="header-account-username">Avataaars</span>
+              <span class="header-account-username">{{ session()->get('username') }}</span>
               <i style="margin-right: 10px; width: 17px; height: 17px;" class="glyphicon glyphicon-cog"></i>
               <div class="header-account-option" style="">
                   <div class="header-account-option-container">

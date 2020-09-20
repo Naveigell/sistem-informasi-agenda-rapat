@@ -2,6 +2,7 @@
 
 @section('styles')
     <link rel="stylesheet" href="{{ url('/css/page/dashboard/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url('/js/data-tables/datatables.min.css') }}">
 @endsection
 
 @section('body')
@@ -10,7 +11,8 @@
     </div>
     <div class="body-section">
         <h2>List Agenda Rapat</h2>
-        <table style="margin-top: 30px; font-size: 15px;" class="table ">
+        <br/>
+        <table id="agenda-table" style="margin-top: 30px; font-size: 15px;" class="table ">
             <thead>
                 <tr>
                     <th scope="col">No</th>
@@ -45,6 +47,22 @@
                 @endforeach
             </tbody>
         </table>
-        <button class="btn btn-md button-success" type="button" name="button">Tambah Agenda Baru {{ Session::get('id') }}</button>
+        <br/>
+        <a class="btn btn-md button-success" href="/superadmin/agenda/insert">Tambah Agenda Baru</a>
     </div>
+
+    <script src="{{ url('js/jquery.min.js') }}"></script>
+    <script src="{{ url('js/data-tables/datatables.min.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            $('#agenda-table').DataTable();
+        });
+    </script>
+
+    @if(session()->has('success'))
+        <script src="{{ url('js/sweetalert.min.js') }}"></script>
+        <script>
+            swal("Success!", "{{ session()->get('success') }}");
+        </script>
+    @endif
 @endsection

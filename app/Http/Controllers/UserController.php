@@ -71,7 +71,7 @@ class UserController extends Controller {
                 //
                 // Simpan data kedalam Session setelah memvalidasi password
 
-                Auth::guard('user')->store($user->id_user, $user->role);
+                Auth::guard('user')->store($user->id_user, $user->username, $user->role);
                 return redirect($user->role.'/agenda');
             }
 

@@ -23,7 +23,7 @@ class SessionGuard implements Guard {
     }
 
     public function check() {
-        return Session::get('id') != null && Session::get('role') != null;
+        return Session::get('id') != null && Session::get('username') != null && Session::get('role') != null;
     }
 
     public function guest() {
@@ -40,13 +40,15 @@ class SessionGuard implements Guard {
 
     public function destroy() {
         Session::forget('id');
+        Session::forget('username');
         Session::forget('role');
 
-        return Session::get('id') == null && Session::get('role') == null;
+        return Session::get('id') == null && Session::get('username') == null && Session::get('role') == null;
     }
 
-    public function store(string $id, string $role) {
+    public function store(string $id, string $username, string $role) {
         Session::put('id', $id);
+        Session::put('username', $username);
         Session::put('role', $role);
     }
 
