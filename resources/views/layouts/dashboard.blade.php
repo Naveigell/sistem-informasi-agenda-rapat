@@ -20,7 +20,7 @@
               <div class="header-account-option" style="">
                   <div class="header-account-option-container">
                       <ul class="dropdown-menu dropdown-container">
-                          <li><a href="#">Logout</a></li>
+                          <li><a href="/logout">Logout</a></li>
                       </ul>
                   </div>
               </div>

@@ -31,7 +31,11 @@ class UserSeeder extends Seeder {
         $role = ['user', 'admin', 'superadmin'];
 
         for ($i = 0; $i < 40; $i++) {
-            $nama = $i % 2 == 0 ? $this->randomDouble($namaPria) : $this->randomDouble($namaWanita);
+            $separator = $this->random(['_', '.', '']);
+            $nama = $i % 2 == 0 ?
+                $this->random($namaPria).$separator.$this->random($namaPria) :
+                $this->random($namaWanita).$separator.$this->random($namaWanita);
+
             $email = strtolower(str_replace(' ', '', $nama.rand(0, 9999)."@".$this->random($prefix)));
 
             $user->insertOrIgnore([

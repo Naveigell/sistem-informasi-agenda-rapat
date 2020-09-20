@@ -22,44 +22,29 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td class="col-md-3">Rapat Tentang Penyusunan Laporan Keuangan Semester I</td>
-                    <td>12 Januari 2019</td>
-                    <td>09.00 - 12.00 WITA</td>
-                    <td>Gedung Bapetnas, Lt 4</td>
-                    <td class="col-md-3">
-                        <a href="/superadmin/agenda/1" class="btn btn-md button-secondary" type="button" name="button">Detail</a>
-                        <a href="/superadmin/agenda/1/edit" class="btn btn-md button-warning" type="button" name="button">Edit</a>
-                        <button class="btn btn-md button-primary" type="button" name="button">Arsipkan</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td class="col-md-3">Rapat Tentang PKLN PT. Tanjung Power</td>
-                    <td>12 Januari 2019</td>
-                    <td>19.00 - 20.00 WITA</td>
-                    <td>Aula Gedung Satlantas</td>
-                    <td class="col-md-3">
-                        <a href="/superadmin/agenda/1" class="btn btn-md button-secondary" type="button" name="button">Detail</a>
-                        <a href="/superadmin/agenda/1/edit" class="btn btn-md button-warning" type="button" name="button">Edit</a>
-                        <button class="btn btn-md button-primary" type="button" name="button">Arsipkan</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td class="col-md-3">Rapat Tentang Investigasi Pangan</td>
-                    <td>12 Januari 2019</td>
-                    <td>17.00 - 18.00 WITA</td>
-                    <td>Di tengah Lapangan Puputan Renon</td>
-                    <td class="col-md-3">
-                        <a href="/superadmin/agenda/1" class="btn btn-md button-secondary" type="button" name="button">Detail</a>
-                        <a href="/superadmin/agenda/1/edit" class="btn btn-md button-warning" type="button" name="button">Edit</a>
-                        <button class="btn btn-md button-primary" type="button" name="button">Arsipkan</button>
-                    </td>
-                </tr>
+                @foreach($data as $agenda)
+                    @php
+                        $date = Carbon\Carbon::parse($agenda->jadwal_rapat);
+                    @endphp
+                    <tr>
+                        <th scope="row">{{ $number++ }}</th>
+                        <td class="col-md-2">{{ $agenda->perihal_rapat }}</td>
+                        <td>
+                            {{ $date->day }}
+                            {{ $date->monthName }}
+                            {{ $date->year }}
+                        </td>
+                        <td>{{ date('H:i', strtotime($agenda->waktu_rapat)) }} WITA</td>
+                        <td>{{ $agenda->ruangan_rapat }}</td>
+                        <td class="col-md-3">
+                            <a href="/superadmin/agenda/{{ $agenda->id_rapat }}" class="btn btn-md button-secondary" type="button" name="button">Detail</a>
+                            <a href="/superadmin/agenda/{{ $agenda->id_rapat }}/edit" class="btn btn-md button-warning" type="button" name="button">Edit</a>
+                            <button class="btn btn-md button-primary" type="button" name="button">Arsipkan</button>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
-        <button class="btn btn-md button-success" type="button" name="button">Tambah Agenda Baru</button>
+        <button class="btn btn-md button-success" type="button" name="button">Tambah Agenda Baru {{ Session::get('id') }}</button>
     </div>
 @endsection

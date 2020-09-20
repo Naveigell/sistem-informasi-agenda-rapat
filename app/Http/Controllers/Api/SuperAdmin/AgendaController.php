@@ -5,9 +5,19 @@ namespace App\Http\Controllers\Api\SuperAdmin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use Carbon\Carbon;
+
+use App\Models\SuperAdmin\AgendaRapatModel;
+
 class AgendaController extends Controller {
     public function showView() {
-        return view('pages.superadmin.agenda.agenda');
+
+        $data   = AgendaRapatModel::all();
+        $number = 1;
+
+        Carbon::setLocale('id');
+
+        return view('pages.superadmin.agenda.agenda', compact('data','number'));
     }
 
     public function detailView($id) {

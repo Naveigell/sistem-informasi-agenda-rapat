@@ -19,11 +19,11 @@ class SessionGuard implements Guard {
     }
 
     public function role(){
-        return Session::get('role', null);
+        return Session::get('role');
     }
 
     public function check() {
-        return Session::getId() != null && Session::get('role', null) != null;
+        return Session::get('id') != null && Session::get('role') != null;
     }
 
     public function guest() {
@@ -35,11 +35,18 @@ class SessionGuard implements Guard {
     }
 
     public function id() {
-        return Session::getId();
+        return Session::get('id');
+    }
+
+    public function destroy() {
+        Session::forget('id');
+        Session::forget('role');
+
+        return Session::get('id') == null && Session::get('role') == null;
     }
 
     public function store(string $id, string $role) {
-        Session::setId($id);
+        Session::put('id', $id);
         Session::put('role', $role);
     }
 

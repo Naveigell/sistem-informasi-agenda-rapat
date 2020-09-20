@@ -15,18 +15,19 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function (){
-    var_dump(auth('user')->id());
-
-//    return redirect()->to('/superadmin/agenda');
+//    var_dump(auth('user')->id());
+    return redirect()->to('/superadmin/agenda');
 });
 
 Route::get('/superadmin/login', function (){
     return view('login');
 });
 
+Route::get('/logout', 'UserController@logout');
+
 // API ROUTE
 Route::group(['prefix' => '/api'], function (){
-    Route::post('/login', 'Api\SuperAdmin\UserController@login');
+    Route::post('/login', 'UserController@login');
 });
 
 // ROUTE SUPERADMIN
