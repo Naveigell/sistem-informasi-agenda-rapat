@@ -35,6 +35,9 @@ Route::group(['prefix' => '/api'], function (){
     Route::post('/superadmin/anggota/insert', 'Api\SuperAdmin\AnggotaController@insert');
     Route::post('/superadmin/anggota/pimpinan/update', 'Api\SuperAdmin\Anggota\PimpinanController@update');
     Route::post('/superadmin/anggota/pimpinan/delete', 'Api\SuperAdmin\Anggota\PimpinanController@delete');
+
+    Route::post('/superadmin/profile/update', 'Api\SuperAdmin\ProfileController@updateBiodata');
+    Route::post('/superadmin/profile/password/update', 'Api\SuperAdmin\ProfileController@updatePassword');
 });
 
 // ROUTE SUPERADMIN

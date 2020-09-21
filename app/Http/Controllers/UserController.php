@@ -64,8 +64,6 @@ class UserController extends Controller {
         if ($user->exists()) {
             $user = $user->first();
 
-            error_log($user->id_user);
-
             if (Hash::check($password, $user->password)) {
                 // Store the data to Session after validating password
                 //

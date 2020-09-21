@@ -20,7 +20,8 @@
               <div class="header-account-option" style="">
                   <div class="header-account-option-container">
                       <ul class="dropdown-menu dropdown-container">
-                          <li><a href="/logout">Logout</a></li>
+                          <li><a href="/{{ session()->get('role') }}/profile" style="padding-top: 10px; padding-bottom: 10px">Profil</a></li>
+                          <li><a href="/logout" style="padding-top: 10px; padding-bottom: 10px">Logout</a></li>
                       </ul>
                   </div>
               </div>
