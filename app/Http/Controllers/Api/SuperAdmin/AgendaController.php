@@ -78,6 +78,12 @@ class AgendaController extends Controller {
         return redirect()->to('/superadmin/agenda')->with('success', 'Agenda berhasil dibuat');
     }
 
+    /**
+     * Update Agenda
+     *
+     * @param AgendaUpdateRequest $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function update(AgendaUpdateRequest $request) {
         $id         = $request->id;
         $perihal    = $request->perihal;

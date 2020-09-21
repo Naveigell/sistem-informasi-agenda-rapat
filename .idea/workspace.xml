@@ -2,29 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bb49978-79e2-481d-8765-ba3cde3e3a66" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/pimpinan.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Auth/Guard/SessionGuard.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Auth/Guard/SessionGuard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/ValidatorExceptionRequest.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/AgendaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/AgendaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Rapat/AgendaRapatModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Seeder/AgendaRapatModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Rapat/PimpinanRapatModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Seeder/PimpinanRapatModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Rapat/SuratRapatModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Seeder/SuratRapatModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/AnggotaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/AnggotaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/SuperAdmin/AgendaRapatModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/SuperAdmin/AgendaRapatModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_17_091017_create_agenda_rapat_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_17_091017_create_agenda_rapat_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/page/layouts/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/page/layouts/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/SuperAdmin/PimpinanRapatModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/SuperAdmin/PimpinanRapatModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/page/layouts/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/page/layouts/dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/agenda/agenda.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/agenda/agenda.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/agenda/detail/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/agenda/detail/detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/agenda/edit/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/agenda/edit/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/agenda/insert/insert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/agenda/insert/insert.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/anggota.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/detail/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/detail/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/edit/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/edit/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/insert/insert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/insert/insert.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,11 +53,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\resources\views\pages\superadmin\anggota\pimpinan" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Requests\SuperAdmin\Agenda" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Middleware\App" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Models\Seeder" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Controllers\Api\SuperAdmin" />
-      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app" />
     </key>
   </component>
   <component name="RunManager">
@@ -111,7 +100,9 @@
       <workItem from="1600585905294" duration="5274000" />
       <workItem from="1600592043909" duration="727000" />
       <workItem from="1600601780525" duration="6868000" />
-      <workItem from="1600612979360" duration="2174000" />
+      <workItem from="1600612979360" duration="3603000" />
+      <workItem from="1600656114967" duration="6757000" />
+      <workItem from="1600672260446" duration="4377000" />
     </task>
     <servers />
   </component>
@@ -127,10 +118,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" width="1089" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1600088806866" />
-    <state x="574" y="94" key="#com.intellij.ide.util.MemberChooser" timestamp="1600589595254">
+    <state x="574" y="94" key="#com.intellij.ide.util.MemberChooser" timestamp="1600660304764">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="94" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1600589595254" />
+    <state x="574" y="94" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1600660304764" />
     <state x="518" y="61" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600605803534">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -147,10 +138,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="489" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1600602221533" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1600602235028">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1600658902430">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1600602235028" />
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1600658902430" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1600574596416">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -167,9 +158,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1600171669349" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600588712089">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600675696466">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1600588712089" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1600675696466" />
   </component>
 </project>

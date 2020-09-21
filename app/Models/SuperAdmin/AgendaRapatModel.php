@@ -37,6 +37,18 @@ class AgendaRapatModel extends Model {
         ]);
     }
 
+    /**
+     * Update agenda rapat
+     *
+     * @param $id
+     * @param $perihal
+     * @param $surat
+     * @param $pimpinan
+     * @param $tanggal
+     * @param $waktu
+     * @param $ruangan
+     * @return int
+     */
     public function updateAgendaRapat($id, $perihal, $surat, $pimpinan, $tanggal, $waktu, $ruangan){
         return $this->where([
             'id_rapat'                      => $id

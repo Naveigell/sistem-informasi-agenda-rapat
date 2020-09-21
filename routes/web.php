@@ -31,6 +31,10 @@ Route::group(['prefix' => '/api'], function (){
 
     Route::post('/superadmin/agenda/insert', 'Api\SuperAdmin\AgendaController@insert');
     Route::post('/superadmin/agenda/update', 'Api\SuperAdmin\AgendaController@update');
+
+    Route::post('/superadmin/anggota/insert', 'Api\SuperAdmin\AnggotaController@insert');
+    Route::post('/superadmin/anggota/pimpinan/update', 'Api\SuperAdmin\Anggota\PimpinanController@update');
+    Route::post('/superadmin/anggota/pimpinan/delete', 'Api\SuperAdmin\Anggota\PimpinanController@delete');
 });
 
 // ROUTE SUPERADMIN
@@ -47,9 +51,11 @@ Route::group(['prefix' => '/superadmin', 'middleware' => 'user'], function (){
     Route::get('/agenda/{id}/edit', 'Api\SuperAdmin\AgendaController@editView');
 
     Route::get('/anggota', 'Api\SuperAdmin\AnggotaController@showView');
-    Route::get('/anggota/insert', 'Api\SuperAdmin\AnggotaController@insertView');
-    Route::get('/anggota/{id}', 'Api\SuperAdmin\AnggotaController@detailView');
-    Route::get('/anggota/{id}/edit', 'Api\SuperAdmin\AnggotaController@editView');
+    Route::get('/anggota/insert', 'Api\SuperAdmin\AnggotaController@insertView')->middleware('remove.cache');
+
+    Route::get('/anggota/pimpinan', 'Api\SuperAdmin\Anggota\PimpinanController@showView');
+    Route::get('/anggota/pimpinan/{id}', 'Api\SuperAdmin\Anggota\PimpinanController@detailView');
+    Route::get('/anggota/pimpinan/{id}/edit', 'Api\SuperAdmin\Anggota\PimpinanController@editView');
 
     Route::get('/profile', 'Api\SuperAdmin\ProfileController@showView');
 

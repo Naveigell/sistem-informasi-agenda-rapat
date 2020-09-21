@@ -28,34 +28,34 @@
       </header>
       <div class="left-side-bar">
           <h2></h2>
-          <span>
+          <a href="/">
               <i class="glyphicon glyphicon-home" style="margin-right: 10px;"></i>
               Dashboard
-          </span>
-          <span>
+          </a>
+          <a href="/{{ session()->get('role') }}/anggota">
               <i class="glyphicon glyphicon-user" style="margin-right: 10px;"></i>
-              Pegawai
-          </span>
-          <span>
+              Anggota
+          </a>
+          <a href="/{{ session()->get('role') }}/arsip">
               <i class="glyphicon glyphicon-th-list" style="margin-right: 10px;"></i>
               Arsip
-          </span>
-          <span class="active">
+          </a>
+          <a href="/{{ session()->get('role') }}/agenda" class="active">
               <i class="glyphicon glyphicon-calendar" style="margin-right: 10px;"></i>
               Agenda
-          </span>
-          <span>
+          </a>
+          <a href="/{{ session()->get('role') }}/surat">
               <i class="glyphicon glyphicon-file" style="margin-right: 10px;"></i>
               Surat
-          </span>
-          <span>
+          </a>
+          <a href="/{{ session()->get('role') }}/notifikasi">
               <i class="glyphicon glyphicon-bell" style="margin-right: 10px;"></i>
               Notifikasi
-          </span>
-          <span>
+          </a>
+          <a href="/{{ session()->get('role') }}/pengaturan">
               <i class="glyphicon glyphicon-cog" style="margin-right: 10px;"></i>
               Pengaturan
-          </span>
+          </a>
       </div>
       <div class="container">
       @yield('body')
