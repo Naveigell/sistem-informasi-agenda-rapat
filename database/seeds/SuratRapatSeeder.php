@@ -4,6 +4,8 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
 
+use Illuminate\Support\Str;
+
 use App\Traits\RandomSeeder;
 
 class SuratRapatSeeder extends Seeder {

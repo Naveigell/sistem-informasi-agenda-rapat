@@ -53,7 +53,6 @@
     <script src="{{ url('js/sweetalert.min.js') }}"></script>
     <script>
         $(document).ready(function () {
-            $('#anggota-table').DataTable();
             $('.del-btn').on('click', function (evt){
                 const id = evt.target.getAttribute('del-id');
 
@@ -66,6 +65,8 @@
                         dangerMode: true,
                     }).then((response) => {
 
+                        if (response == null) return;
+
                         $.ajax({
                             url: '/api/superadmin/anggota/pimpinan/delete',
                             method: 'POST',
@@ -74,6 +75,9 @@
                                 _token: $('#_token')[0].value
                             },
                             success: function (res) {
+
+                                if (res == null) return;
+
                                 swal({
                                     title: "Success!",
                                     text: "Hapus data berhasil!",
@@ -90,13 +94,12 @@
                                     icon: "warning",
                                     button: "OK",
                                 });
-
-                                console.log(error)
                             }
                         });
                     });
                 }
             });
+            $('#anggota-table').DataTable();
         });
     </script>
 

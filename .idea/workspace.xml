@@ -2,12 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bb49978-79e2-481d-8765-ba3cde3e3a66" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/js/jquery/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery/jquery-ui.structure.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery/jquery-ui.structure.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery/jquery-ui.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery/jquery-ui.theme.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/page/superadmin/profile/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/page/superadmin/profile/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/profile/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/profile/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/SuratController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/SuratController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/SuperAdmin/SuratRapatModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/SuperAdmin/SuratRapatModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_17_090037_create_surat_rapat_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_17_090037_create_surat_rapat_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/SuratRapatSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/SuratRapatSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/pimpinan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/pimpinan.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/surat/detail/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/surat/detail/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/surat/edit/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/surat/edit/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/surat/surat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/surat/surat.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +51,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js/jquery" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="DEFAULT" />
@@ -46,6 +59,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\public\js\jquery" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\resources\views\pages\superadmin\anggota\pimpinan" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Requests\SuperAdmin\Agenda" />
@@ -97,7 +113,12 @@
       <workItem from="1600612979360" duration="3603000" />
       <workItem from="1600656114967" duration="6757000" />
       <workItem from="1600672260446" duration="6199000" />
-      <workItem from="1600687742510" duration="5046000" />
+      <workItem from="1600687742510" duration="6266000" />
+      <workItem from="1600738425476" duration="4512000" />
+      <workItem from="1600746520068" duration="4664000" />
+      <workItem from="1600758132192" duration="1909000" />
+      <workItem from="1600761692058" duration="3372000" />
+      <workItem from="1600773746629" duration="1937000" />
     </task>
     <servers />
   </component>
@@ -113,10 +134,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" width="1089" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1600088806866" />
-    <state x="574" y="94" key="#com.intellij.ide.util.MemberChooser" timestamp="1600691518030">
+    <state x="574" y="94" key="#com.intellij.ide.util.MemberChooser" timestamp="1600747327659">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="94" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1600691518030" />
+    <state x="574" y="94" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1600747327659" />
     <state x="518" y="61" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600605803534">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -129,18 +150,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600088299349" />
-    <state x="489" y="135" key="NewPhpClassDialog" timestamp="1600602221533">
+    <state x="489" y="135" key="NewPhpClassDialog" timestamp="1600748450072">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="489" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1600602221533" />
+    <state x="489" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1600748450072" />
     <state x="604" y="336" key="NewPhpFileDialog" timestamp="1600658902430">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1600658902430" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1600574596416">
+    <state x="277" y="57" key="SettingsEditor" timestamp="1600775685649">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600574596416" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600775685649" />
     <state x="585" y="101" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600578641923">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -149,13 +170,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="428" y="220" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1600517185228" />
+    <state x="486" y="184" key="refactoring.ChangeSignatureDialog" timestamp="1600750718743">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="486" y="184" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1600750718743" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1600688372326">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1600688372326" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600675696466">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600751078656">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1600675696466" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1600751078656" />
   </component>
 </project>

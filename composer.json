@@ -41,7 +41,8 @@
             "database/factories"
         ],
         "files": [
-            "app/Helpers/ErrorChecking.php"
+            "app/Helpers/ErrorChecking.php",
+            "app/Helpers/HtmlFilter.php"
         ]
     },
     "autoload-dev": {

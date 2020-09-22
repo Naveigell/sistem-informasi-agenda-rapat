@@ -2,6 +2,7 @@
 
 @section('styles')
     <link rel="stylesheet" href="{{ url('/css/page/superadmin/surat/detail.css') }}">
+    <link rel="stylesheet" href="{{ url('/js/data-tables/datatables.min.css') }}">
     <style>
         .body-section:last-child {
             margin-top: 780px;
@@ -14,14 +15,48 @@
         <h4>Detail Surat</h4>
     </div>
 
-    <div class="body-section col-md-12" style="padding: 40px 55px;">
+    <div class="body-section">
+        <a href="/superadmin/surat" class="button-secondary btn btn-md">Kembali</a>
+{{--        <button class="button-success btn btn-md" data-toggle="modal" data-target=".bd-example-modal-lg">Kirim</button>--}}
+    </div>
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div style="padding: 30px;"  class="modal-content">
+                <h2>Kirim kepada</h2>
+                <br/>
+                <table id="penerima-table" style="margin-top: 30px; font-size: 15px;" class="table ">
+                    <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Username penerima</th>
+                        <th scope="col">Wewenang</th>
+                        <th scope="col">Aksi</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td class="">perihal surat</td>
+                        <td>nomor surat</td>
+                        <td>
+                            <button class="btn btn-md button-success">Kirim</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-section col-md-12" style="padding: 40px 55px; margin-top: 10px;">
         <div class="mail-container">
-            <div class="mail-date">Jakarta, 12 Desember 1990</div>
+{{--            <div class="mail-date">Jakarta, 12 Desember 1990</div>--}}
             <div class="mail-detail">
                 <table>
                     <tr>
-                        <td>No</td>
-                        <td>: 0831/123/SP/PT</td>
+                        <td>Nomor surat</td>
+                        <td>: {{ $surat->id_nomor_surat }}</td>
                     </tr>
                     <tr>
                         <td>Lampiran</td>
@@ -29,7 +64,7 @@
                     </tr>
                     <tr>
                         <td>Hal</td>
-                        <td>: Rapat Dewan Direksi</td>
+                        <td>: {{ $surat->perihal_surat }}</td>
                     </tr>
                 </table>
             </div>
@@ -37,57 +72,35 @@
             <br/>
             <div class="mail-to">
                 Kepada <br/>
-                Yth. Bapak Dewan Direksi <br/>
+                {{ $surat->tujuan_surat }} <br/>
                 Di Tempat
             </div>
             <br/>
             <br/>
             <div class="mail-body">
-                <p class="mail-paragraph">
-                    Dengan ini  Kepala Dewan Direksi mengundang Dewan Direksi untuk menghadiri Rapat Dewan Direksi yang bertujuan untuk
-                    mensosialisasikan kegiatan sekolah serta pemberitahuan tentang peraturan - peraturan di sekolah kami. Rapat ini
-                    akan dilaksanakan pada Sabtu 05 September 2200.
-                </p>
-                <p class="mail-paragraph">
-                    Dalam rangka meningkatkan kinerja dan perbaikan alokasi jam kerja. Maka diberitahukan pada seluruh staff dan
-                    karyawan PT. Makmur Jaya Abadi agar membaca informasi terbaru tentang perubahan sift agar tidak terjadi
-                    kekeliruan. Perubahan jam kerja dapat dilihat pada lampiran surat dan keputusan ini tidak dapat diganggu gugat.
-                </p>
-                <p class="mail-paragraph">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eveniet obcaecati perferendis voluptates
-                    voluptatum? Accusamus accusantium aliquam asperiores assumenda hic laborum laudantium nam, necessitatibus,
-                    officiis reprehenderit sequi, sit totam voluptatem.
-                </p>
-                <p class="mail-paragraph">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci commodi dignissimos illo magnam veniam
-                    veritatis. Adipisci aliquam assumenda debitis, dolorum molestias, necessitatibus quam qui quos, ut vel veniam
-                    vero.
-                </p>
+                {!! $surat->isi_surat !!}
             </div>
             <br/>
             <br/>
             <br/>
-            <div class="mail-from">
+            <div class="mail-from" style="margin-top: 70px;">
                 <div class="mail-from-text">
                     <span class="mail-from-position">
-                        Dewan Direksi Tertinggi, <span class="main-from-date">12 September 2020</span>
+                        {{ $surat->jabatan_pengirim }}, <span class="main-from-date">{{ \Carbon\Carbon::parse($surat->tanggal_surat)->format('d F Y') }}</span>
                     </span>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <span class="mail-from-name">Elit Global Official</span>
+                    <span class="mail-from-name" style="display: block; margin-top: 120px;">{{ $surat->pengirim_surat }}</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="body-section">
-        <button class="button-secondary btn btn-md">Kembali</button>
-        <button class="button-success btn btn-md"><i class="glyphicon glyphicon-print"></i> &nbsp Lihat dan Print</button>
-    </div>
+
+    <script src="{{ url('js/jquery.min.js') }}"></script>
+    <script src="{{ url('js/data-tables/datatables.min.js') }}"></script>
+    <script src="{{ url('css/bootstrap/js/bootstrap.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            $('#penerima-table').DataTable();
+        });
+    </script>
 @endsection

@@ -15,7 +15,8 @@ class CreateSuratRapatTable extends Migration
     {
         if (!Schema::hasTable('surat_rapat')) {
             Schema::create('surat_rapat', function (Blueprint $table) {
-                $table->string('id_nomor_surat')->primary();
+                $table->bigIncrements('id_surat_rapat');
+                $table->string('id_nomor_surat')->unique();
                 $table->string('perihal_surat', 120);
                 $table->string('tujuan_surat', 120);
                 $table->text('isi_surat');

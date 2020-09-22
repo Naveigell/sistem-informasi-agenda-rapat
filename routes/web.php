@@ -38,6 +38,9 @@ Route::group(['prefix' => '/api'], function (){
 
     Route::post('/superadmin/profile/update', 'Api\SuperAdmin\ProfileController@updateBiodata');
     Route::post('/superadmin/profile/password/update', 'Api\SuperAdmin\ProfileController@updatePassword');
+
+    Route::post('/superadmin/surat/update', 'Api\SuperAdmin\SuratController@update');
+    Route::post('/superadmin/surat/delete', 'Api\SuperAdmin\SuratController@delete');
 });
 
 // ROUTE SUPERADMIN
