@@ -76,6 +76,12 @@ class AgendaRapatModel extends Model {
         ])->get();
     }
 
+    public function getPesertaRapat($id){
+        return $this->with('pesertaRapat')->where([
+            'id_rapat'      => $id
+        ])->get();
+    }
+
     /**
      * Relationship with Pimpinan Rapat
      *
@@ -85,5 +91,9 @@ class AgendaRapatModel extends Model {
      */
     public function pimpinanRapat(){
         return $this->belongsTo(PimpinanRapatModel::class, 'rapat_id_pimpinan_rapat', 'id_pimpinan_rapat');
+    }
+
+    public function pesertaRapat() {
+        return $this->hasMany(PesertaRapatModel::class, 'peserta_rapat_id_rapat', 'id_rapat');
     }
 }

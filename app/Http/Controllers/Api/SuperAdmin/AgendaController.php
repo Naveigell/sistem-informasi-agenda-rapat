@@ -42,8 +42,9 @@ class AgendaController extends Controller {
         $data   = $this->agendaRapatModel->getWithId($id)->first();
         $surat  = SuratRapatModel::all();
         $pimpinan   = PimpinanRapatModel::all();
+        $peserta    = $this->agendaRapatModel->getPesertaRapat($id)->toArray()[0]['peserta_rapat'];
 
-        return view('pages.superadmin.agenda.edit.edit', compact('data', 'surat', 'pimpinan'));
+        return view('pages.superadmin.agenda.edit.edit', compact('data', 'surat', 'pimpinan', 'peserta'));
     }
 
     public function insertView() {

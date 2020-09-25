@@ -54,6 +54,11 @@ class Handler extends ExceptionHandler
 
         // if validation error
         if ($exception instanceof ValidationException) {
+
+            if ($request->wantsJson() || $request->ajax()) {
+                return response()->json($exception->validator->errors(), $exception->status);
+            }
+
             return back()->withInput($request->all())->withErrors($exception->validator->getMessageBag());
         }
 

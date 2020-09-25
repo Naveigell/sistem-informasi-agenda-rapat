@@ -41,6 +41,11 @@ Route::group(['prefix' => '/api'], function (){
 
     Route::post('/superadmin/surat/update', 'Api\SuperAdmin\SuratController@update');
     Route::post('/superadmin/surat/delete', 'Api\SuperAdmin\SuratController@delete');
+
+    Route::get('/superadmin/peserta/{id}', 'Api\SuperAdmin\PesertaController@getAt');
+    Route::post('/superadmin/peserta/update', 'Api\SuperAdmin\PesertaController@update');
+    Route::post('/superadmin/peserta/delete', 'Api\SuperAdmin\PesertaController@delete');
+    Route::post('/superadmin/peserta/insert', 'Api\SuperAdmin\PesertaController@insert');
 });
 
 // ROUTE SUPERADMIN

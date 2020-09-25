@@ -29,8 +29,8 @@ class CreateAgendaRapatTable extends Migration
                 $table->timestamps();
 
                 // add foreign key
-                $table->foreign('rapat_id_pimpinan_rapat')->references('id_pimpinan_rapat')->on('pimpinan_rapat')->onDelete('cascade');
-                $table->foreign('rapat_id_nomor_surat')->references('id_nomor_surat')->on('surat_rapat')->onDelete('cascade');
+                $table->foreign('rapat_id_pimpinan_rapat')->references('id_pimpinan_rapat')->on('pimpinan_rapat')->onDelete('cascade')->onUpdate('cascade');
+                $table->foreign('rapat_id_nomor_surat')->references('id_nomor_surat')->on('surat_rapat')->onDelete('cascade')->onUpdate('cascade');
             });
         }
     }
