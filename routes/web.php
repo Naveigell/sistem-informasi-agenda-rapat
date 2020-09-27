@@ -39,6 +39,11 @@ Route::group(['prefix' => '/api'], function (){
     Route::post('/superadmin/profile/update', 'Api\SuperAdmin\ProfileController@updateBiodata');
     Route::post('/superadmin/profile/password/update', 'Api\SuperAdmin\ProfileController@updatePassword');
 
+    Route::post('/superadmin/anggota/admin/insert', 'Api\SuperAdmin\Anggota\AdminsController@insert');
+    Route::post('/superadmin/anggota/admin/update', 'Api\SuperAdmin\Anggota\AdminsController@update');
+    Route::post('/superadmin/anggota/admin/delete', 'Api\SuperAdmin\Anggota\AdminsController@delete');
+
+    Route::post('/superadmin/surat/insert', 'Api\SuperAdmin\SuratController@insert');
     Route::post('/superadmin/surat/update', 'Api\SuperAdmin\SuratController@update');
     Route::post('/superadmin/surat/delete', 'Api\SuperAdmin\SuratController@delete');
 
@@ -51,28 +56,32 @@ Route::group(['prefix' => '/api'], function (){
 // ROUTE SUPERADMIN
 Route::group(['prefix' => '/superadmin', 'middleware' => 'user'], function (){
 
-    Route::get('/surat', 'Api\SuperAdmin\SuratController@showView');
-    Route::get('/surat/insert', 'Api\SuperAdmin\SuratController@insertView');
-    Route::get('/surat/{id}', 'Api\SuperAdmin\SuratController@detailView');
-    Route::get('/surat/{id}/edit', 'Api\SuperAdmin\SuratController@editView');
+    Route::get('/surat', 'Api\SuperAdmin\SuratController@showView')->name('surat.index');
+    Route::get('/surat/insert', 'Api\SuperAdmin\SuratController@insertView')->name('surat.insert');
+    Route::get('/surat/{id}', 'Api\SuperAdmin\SuratController@detailView')->name('surat.detail');
+    Route::get('/surat/{id}/edit', 'Api\SuperAdmin\SuratController@editView')->name('surat.edit');
 
-    Route::get('/agenda', 'Api\SuperAdmin\AgendaController@showView')->middleware('remove.cache');
-    Route::get('/agenda/insert', 'Api\SuperAdmin\AgendaController@insertView');
-    Route::get('/agenda/{id}', 'Api\SuperAdmin\AgendaController@detailView');
-    Route::get('/agenda/{id}/edit', 'Api\SuperAdmin\AgendaController@editView');
+    Route::get('/agenda', 'Api\SuperAdmin\AgendaController@showView')->middleware('remove.cache')->name('agenda.index');
+    Route::get('/agenda/insert', 'Api\SuperAdmin\AgendaController@insertView')->name('agenda.insert');
+    Route::get('/agenda/{id}', 'Api\SuperAdmin\AgendaController@detailView')->name('agenda.detail');
+    Route::get('/agenda/{id}/edit', 'Api\SuperAdmin\AgendaController@editView')->name('agenda.edit');
 
-    Route::get('/anggota', 'Api\SuperAdmin\AnggotaController@showView');
-    Route::get('/anggota/insert', 'Api\SuperAdmin\AnggotaController@insertView')->middleware('remove.cache');
+    Route::get('/anggota', 'Api\SuperAdmin\AnggotaController@showView')->name('anggota.index');
+    Route::get('/anggota/insert', 'Api\SuperAdmin\AnggotaController@insertView')->middleware('remove.cache')->name('anggota.insert');
 
-    Route::get('/anggota/pimpinan', 'Api\SuperAdmin\Anggota\PimpinanController@showView');
-    Route::get('/anggota/pimpinan/{id}', 'Api\SuperAdmin\Anggota\PimpinanController@detailView');
-    Route::get('/anggota/pimpinan/{id}/edit', 'Api\SuperAdmin\Anggota\PimpinanController@editView');
+    Route::get('/anggota/pimpinan', 'Api\SuperAdmin\Anggota\PimpinanController@showView')->name('anggota.pimpinan.index');
+    Route::get('/anggota/pimpinan/{id}', 'Api\SuperAdmin\Anggota\PimpinanController@detailView')->name('anggota.pimpinan.detail');
+    Route::get('/anggota/pimpinan/{id}/edit', 'Api\SuperAdmin\Anggota\PimpinanController@editView')->name('anggota.pimpinan.edit');
 
-    Route::get('/profile', 'Api\SuperAdmin\ProfileController@showView');
+    Route::get('/anggota/admin', 'Api\SuperAdmin\Anggota\AdminsController@showView');
+    Route::get('/anggota/admin/insert', 'Api\SuperAdmin\Anggota\AdminsController@insertView');
+    Route::get('/anggota/admin/{id}/edit', 'Api\SuperAdmin\Anggota\AdminsController@editView');
+
+    Route::get('/profile', 'Api\SuperAdmin\ProfileController@showView')->name('profile.index');
 
     Route::get('/pengaturan', 'Api\SuperAdmin\SettingController@showView');
 
     Route::get('/arsip', function () {
         return view('pages.superadmin.arsip.arsip');
-    });
+    })->name('arsip.index');
 });

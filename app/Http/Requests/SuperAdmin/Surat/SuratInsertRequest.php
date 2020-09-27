@@ -4,7 +4,7 @@ namespace App\Http\Requests\SuperAdmin\Surat;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class SuratUpdateRequest extends FormRequest {
+class SuratInsertRequest extends FormRequest {
     /**
      * Determine if the user is authorized to make this request.
      *

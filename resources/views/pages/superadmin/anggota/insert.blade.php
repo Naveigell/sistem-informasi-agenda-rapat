@@ -25,16 +25,6 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2">Wewenang</label>
-                <div class="col-sm-9">
-                    <select name="wewenang" class="form-control">
-                        <option {{ old('wewenang') == 'Pimpinan Rapat' ? 'selected' : '' }} value="Pimpinan Rapat">Pimpinan Rapat</option>
-                        <option {{ old('wewenang') == 'Pegawai' ? 'selected' : '' }} value="Pegawai">Pegawai</option>
-                        <option {{ old('wewenang') == 'Anggota Rapat' ? 'selected' : '' }} value="Anggota Rapat">Anggota Rapat</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group row">
                 <label class="col-sm-2">Jenis Kelamin</label>
                 <div class="col-sm-9">
                     <select name="jenis_kelamin" class="form-control">
@@ -50,7 +40,7 @@
                 </div>
             </div>
             <span class="error-message">
-                {{ error_check(['nama', 'jabatan', 'wewenang', 'jenis_kelamin', 'telp'], $errors) }}
+                {{ error_check(['nama', 'jabatan', 'jenis_kelamin', 'telp'], $errors) }}
                 {{ session()->has('error') ? session()->get('error') : null }}
             </span>
             <br/>

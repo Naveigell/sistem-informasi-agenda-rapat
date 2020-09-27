@@ -52,7 +52,7 @@
                 <small class="form-text text-muted">Buat isi surat</small>
             </div>
             <span class="error-message">
-                {{ error_check(['nomor', 'perihal', 'tujuan', 'jabatan', 'pengirim', 'tanggal'], $errors) }}
+                {{ error_check(['nomor', 'perihal', 'tujuan', 'jabatan', 'pengirim', 'tanggal', 'isi'], $errors) }}
                 {{ session()->has('error') ? session()->get('error') : null }}
             </span>
             <br/>

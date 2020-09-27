@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\SuperAdmin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\SuperAdmin\Surat\SuratInsertRequest;
 use App\Http\Requests\SuperAdmin\Surat\SuratUpdateRequest;
 use App\Models\SuperAdmin\SuratRapatModel;
 use Illuminate\Http\Request;
@@ -54,6 +55,28 @@ class SuratController extends Controller{
         return response()->json(['Hapus surat berhasil'], 200);
     }
 
+    public function insert(SuratInsertRequest $request) {
+
+        $nomor = $request->nomor;
+        $perihal = $request->perihal;
+        $tujuan = $request->tujuan;
+        $jabatan = $request->jabatan;
+        $pengirim = $request->pengirim;
+        $tanggal = $request->tanggal;
+
+        $isi = $request->isi;
+        $isi = html_filter($isi);
+
+        $saved = $this->suratRapatModel->insertSuratRapat(
+            $nomor, $perihal, $tujuan, $jabatan, $pengirim, $tanggal, $isi
+        );
+
+        if (!$saved) {
+            return back()->with('error', 'Terjadi masalah saat mengupdate surat');
+        }
+        return redirect()->to(session()->get('role').'/surat')->with('success', 'Surat berhasil dibuat');
+    }
+
     public function update(SuratUpdateRequest $request){
 
         $id = $request->id;
@@ -74,6 +97,6 @@ class SuratController extends Controller{
         if (!$updated) {
             return back()->with('error', 'Terjadi masalah saat mengupdate surat');
         }
-        return redirect()->to('/superadmin/surat')->with('success', 'Surat berhasil diubah');
+        return redirect()->to(session()->get('role').'/surat')->with('success', 'Surat berhasil diubah');
     }
 }

@@ -21,7 +21,7 @@
                   <div class="display">
                       <div class="left-display">
                           <input type="checkbox"/>
-                          <span>Ingat saya</span>
+                          <span>Login pimpinan</span>
                       </div>
                       <div class="right-display">
                           <a href="forget">Lupa Password?</a>

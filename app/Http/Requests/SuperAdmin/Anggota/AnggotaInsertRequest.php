@@ -24,10 +24,6 @@ class AnggotaInsertRequest extends FormRequest {
             'jabatan.min'                           => 'Panjang jabatan minimal 6 karakter',
             'jabatan.max'                           => 'Panjang jabatan maksimal 255 karakter',
 
-            'wewenang.required'                     => 'Wewenang harus diisi',
-            'wewenang.min'                          => 'Panjang wewenang minimal 6 karakter',
-            'wewewnang.max'                         => 'Panjang wewenang maksimal 30 karakter',
-
             'jenis_kelamin.required'                => 'Jenis kelamin harus diisi',
             'jenis_kelamin.min'                     => 'Panjang jenis kelamin minimal 6 karakter',
             'jenis_kelamin.max'                     => 'Panjang jenis kelamin maksimal 30 karakter',
@@ -48,7 +44,6 @@ class AnggotaInsertRequest extends FormRequest {
         return [
             'nama'              => 'required|string|min:6|max:255',
             'jabatan'           => 'required|string|min:6|max:255',
-            'wewenang'          => 'required|string|min:6|max:30',
             'jenis_kelamin'     => 'required|string|min:6|max:30',
             'telp'              => 'required|string|min:7|max:17'
         ];

@@ -28,10 +28,25 @@ class SuratRapatModel extends Model {
         ]);
     }
 
+    public function insertSuratRapat($nomor, $perihal, $tujuan, $jabatan, $pengirim, $tanggal, $isi){
+        return $this->insert([
+            'id_nomor_surat'            => $nomor,
+            'perihal_surat'             => $perihal,
+            'tujuan_surat'              => $tujuan,
+            'isi_surat'                 => $isi,
+            'jabatan_pengirim'          => $jabatan,
+            'pengirim_surat'            => $pengirim,
+            'tanggal_surat'             => $tanggal
+        ]);
+    }
+
     public function deleteSuratRapat($id) {
         return $this->where([
             'id_surat_rapat'            => $id
         ])->delete();
     }
 
+    public function agendaRapat(){
+        return $this->hasOne(AgendaRapatModel::class, 'rapat_id_nomor_surat');
+    }
 }

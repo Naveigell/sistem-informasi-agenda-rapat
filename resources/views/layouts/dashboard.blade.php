@@ -27,37 +27,61 @@
               </div>
           </div>
       </header>
+      @php
+        function is($name){
+            $arr = explode('.', \Request::route()->getName());
+            $first = reset($arr);
+
+            return $name == $first;
+        }
+      @endphp
       <div class="left-side-bar">
           <h2></h2>
-          <a href="/">
+          <a href="/" class="">
               <i class="glyphicon glyphicon-home" style="margin-right: 10px;"></i>
               Dashboard
           </a>
-          <a href="/{{ session()->get('role') }}/anggota">
+          <a class="{{ is('anggota') ? 'active' : '' }}" parent-sub="anggota" style="cursor: pointer;">
               <i class="glyphicon glyphicon-user" style="margin-right: 10px;"></i>
               Anggota
+              <i class="glyphicon glyphicon-triangle-bottom" style="width: 1px; height: 1px; float: right; transform: translateX(-4000%)"></i>
           </a>
-          <a href="/{{ session()->get('role') }}/arsip">
+          <div class="sub-left-side-bar" child-sub="anggota">
+              <a href="/{{ session()->get('role') }}/anggota/admin">
+                  Admin
+              </a>
+              <a href="/{{ session()->get('role') }}/anggota/pimpinan">
+                  Pimpinan Rapat
+              </a>
+          </div>
+          <a href="/{{ session()->get('role') }}/arsip" class="{{ is('arsip') ? 'active' : '' }}">
               <i class="glyphicon glyphicon-th-list" style="margin-right: 10px;"></i>
               Arsip
           </a>
-          <a href="/{{ session()->get('role') }}/agenda" class="active">
+          <a href="/{{ session()->get('role') }}/agenda" class="{{ is('agenda') ? 'active' : '' }}">
               <i class="glyphicon glyphicon-calendar" style="margin-right: 10px;"></i>
               Agenda
           </a>
-          <a href="/{{ session()->get('role') }}/surat">
+          <a href="/{{ session()->get('role') }}/surat" class="{{ is('surat') ? 'active' : '' }}">
               <i class="glyphicon glyphicon-file" style="margin-right: 10px;"></i>
               Surat
           </a>
-          <a href="/{{ session()->get('role') }}/notifikasi">
-              <i class="glyphicon glyphicon-bell" style="margin-right: 10px;"></i>
-              Notifikasi
-          </a>
-          <a href="/{{ session()->get('role') }}/pengaturan">
+          <a href="/{{ session()->get('role') }}/profile"  class="{{ is('profile') ? 'active' : '' }}">
               <i class="glyphicon glyphicon-cog" style="margin-right: 10px;"></i>
-              Pengaturan
+              Profil
           </a>
       </div>
+      <script src="{{ url('js/jquery.min.js') }}"></script>
+      <script>
+          const parentSub = $('a[parent-sub]');
+
+          parentSub.on('click', function (evt) {
+              const attrName = evt.target.getAttribute('parent-sub');
+              const childSub = $('div[child-sub="' + attrName + '"]');
+
+              childSub[0].style.display = childSub[0].style.display === 'none' ? 'block' : 'none';
+          });
+      </script>
       <div class="container">
       @yield('body')
       </div>

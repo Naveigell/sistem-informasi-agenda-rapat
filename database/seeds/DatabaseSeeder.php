@@ -9,10 +9,10 @@ class DatabaseSeeder extends Seeder {
      * @return void
      */
     public function run() {
+        $this->call(UserSeeder::class);
         $this->call(PimpinanRapatSeeder::class);
         $this->call(SuratRapatSeeder::class);
         $this->call(AgendaRapatSeeder::class);
         $this->call(PesertaRapatSeeder::class);
-        $this->call(UserSeeder::class);
     }
 }

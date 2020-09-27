@@ -40,7 +40,7 @@
                 @endforeach
             </tbody>
         </table>
-        <button class="btn btn-md button-success" type="button" name="button">Tambah Agenda Baru</button>
+        <a href="/{{ session()->get('role') }}/surat/insert" class="btn btn-md button-success" type="button" name="button">Tambah Surat Baru</a>
     </div>
 
     <script src="{{ url('js/jquery.min.js') }}"></script>

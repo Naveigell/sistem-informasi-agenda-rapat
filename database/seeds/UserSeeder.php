@@ -28,7 +28,7 @@ class UserSeeder extends Seeder {
         $prefix   = $internetDecode->email;
 
         $user = DB::table('users');
-        $role = ['user', 'admin', 'superadmin'];
+        $role = ['admin', 'superadmin'];
 
         for ($i = 0; $i < 40; $i++) {
             $separator = $this->random(['_', '.', '']);

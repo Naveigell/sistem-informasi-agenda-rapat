@@ -7,48 +7,46 @@
 
 @section('body')
     <div class="body-section">
-        <h4>List Anggota</h4>
+        <h4>List Admin</h4>
         <input type="text" id="_token" hidden value="{{ csrf_token() }}">
     </div>
 
     <div class="body-section">
-        <h4>List Pimpinan Rapat</h4> <br/>
-        <table id="anggota-table" style="margin-top: 30px; font-size: 15px;" class="table ">
+        <h4>List Admin</h4>
+        <table id="admin-table" style="margin-top: 30px; font-size: 15px;" class="table ">
             <thead>
-                <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Nama Peserta</th>
-                    <th scope="col">Jabatan</th>
-                    <th scope="col">Jenis Kelamin</th>
-                    <th scope="col">Telp</th>
-                    <th scope="col">Aksi</th>
-                </tr>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <th scope="col">Wewenang</th>
+                <th scope="col">Aksi</th>
+            </tr>
             </thead>
             <tbody>
-                @foreach($pimpinan as $p)
-                    <tr>
-                        <th scope="row">{{ $number++ }}</th>
-                        <td>{{ $p->nama_pimpinan }}</td>
-                        <td>{{ $p->jabatan }}</td>
-                        <td>{{ $p->jenis_kelamin }}</td>
-                        <td>{{ $p->no_telepon }}</td>
-                        <td class="col-md-3">
-                            <a href="pimpinan/{{ $p->id_pimpinan_rapat }}" class="btn btn-md button-secondary" type="button">Detail</a>
-                            <a href="pimpinan/{{ $p->id_pimpinan_rapat }}/edit" class="btn btn-md button-warning" type="button">Edit</a>
-                            <button del-id="{{ $p->id_pimpinan_rapat }}" class="btn btn-md button-primary del-btn" type="button">Hapus</button>
-                        </td>
-                    </tr>
-                @endforeach
+            @foreach($admins as $admin)
+                <tr>
+                    <th scope="row">{{ $number++ }}</th>
+                    <td>{{ $admin->username }}</td>
+                    <td>{{ $admin->email }}</td>
+                    <td>{{ $admin->role }}</td>
+                    <td class="col-md-3">
+                        <a href="admin/{{ $admin->id_user }}/edit" class="btn btn-md button-warning" type="button">Edit</a>
+                        <button del-id="{{ $admin->id_user }}" class="btn btn-md button-primary del-btn" type="button">Hapus</button>
+                    </td>
+                </tr>
+            @endforeach
             </tbody>
         </table>
-        <a href="insert" type="button" class="btn btn-md button-success" name="button">
-            <i class="glyphicon-plus glyphicon"></i> &nbsp Tambah Anggota
+        <a href="admin/insert" type="button" class="btn btn-md button-success" name="button">
+            <i class="glyphicon-plus glyphicon"></i> &nbsp Tambah Admin
         </a>
     </div>
 
     <script src="{{ url('js/jquery.min.js') }}"></script>
     <script src="{{ url('js/data-tables/datatables.min.js') }}"></script>
     <script src="{{ url('js/sweetalert.min.js') }}"></script>
+
     <script>
         $(document).ready(function () {
             $('.del-btn').on('click', function (evt){
@@ -66,7 +64,7 @@
                         if (response == null) return;
 
                         $.ajax({
-                            url: '/api/superadmin/anggota/pimpinan/delete',
+                            url: '/api/superadmin/anggota/admin/delete',
                             method: 'POST',
                             data: {
                                 id: id,
@@ -97,7 +95,7 @@
                     });
                 }
             });
-            $('#anggota-table').DataTable();
+            $('#admin-table').DataTable();
         });
     </script>
 

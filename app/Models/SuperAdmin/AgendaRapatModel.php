@@ -71,7 +71,7 @@ class AgendaRapatModel extends Model {
      * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection
      */
     public function getWithId($id) {
-        return $this->with('pimpinanRapat')->where([
+        return $this->with('pimpinanRapat')->with('suratRapat')->where([
             'id_rapat'      => $id
         ])->get();
     }
@@ -91,6 +91,10 @@ class AgendaRapatModel extends Model {
      */
     public function pimpinanRapat(){
         return $this->belongsTo(PimpinanRapatModel::class, 'rapat_id_pimpinan_rapat', 'id_pimpinan_rapat');
+    }
+
+    public function suratRapat(){
+        return $this->belongsTo(SuratRapatModel::class, 'rapat_id_nomor_surat', 'id_nomor_surat');
     }
 
     public function pesertaRapat() {

@@ -94,7 +94,6 @@
         </div>
     </div>
 
-
     <script src="{{ url('js/jquery.min.js') }}"></script>
     <script src="{{ url('js/data-tables/datatables.min.js') }}"></script>
     <script src="{{ url('css/bootstrap/js/bootstrap.js') }}"></script>

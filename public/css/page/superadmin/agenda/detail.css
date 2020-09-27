@@ -1,10 +1,13 @@
 .body-section-container {
     width: 100%;
+    align-items: stretch;
+    align-content: stretch;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin-top: 20px;
+    height: 100px;
 }
 
 .body-section-container > .body-section {
@@ -13,4 +16,6 @@
     width: calc((100% / 4) - 5px);
     height: 100%;
     text-align: center;
+    flex: 1 1;
+    flex-grow: 1;
 }

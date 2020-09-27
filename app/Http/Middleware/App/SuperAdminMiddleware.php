@@ -2,12 +2,10 @@
 
 namespace App\Http\Middleware\App;
 
-use Illuminate\Http\Response;
-use App\Traits\Routes;
 use Closure;
+use Illuminate\Http\Response;
 
-class UserMiddleware {
-    use Routes;
+class SuperAdminMiddleware {
     /**
      * Handle an incoming request.
      *
@@ -16,17 +14,12 @@ class UserMiddleware {
      * @return mixed
      */
     public function handle($request, Closure $next) {
-        $user = auth('user');
 
+        $user = auth('user');
         if ($user->check()) {
-            if ($this->permitted($user->role(), $request->path())) {
-                return $next($request);
-            }
-            else {
-                return new Response(view('errors.401'));
-            }
-        }
-        else {
+
+            return $next($request);
+        } else {
             return new Response(view('errors.404'));
         }
     }

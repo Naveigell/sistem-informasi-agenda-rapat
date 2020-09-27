@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models\User;
+use App\Models\SuperAdmin\BiodataModel;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 
@@ -9,6 +10,7 @@ use Illuminate\Database\Query\Builder as QueryBuilder;
  */
 class UserModel extends Model {
     protected $table = 'users';
+    protected $primaryKey = 'id_user';
 
     /**
      * Function to retrieve id_user, role and password from
@@ -25,5 +27,9 @@ class UserModel extends Model {
         return $this->select(['id_user', 'username', 'role', 'password'])->where([
             'email'     => $email
         ]);
+    }
+
+    public function biodata(){
+        return $this->hasOne(BiodataModel::class, 'biodata_id_user');
     }
 }

@@ -42,7 +42,7 @@
                         <td class="col-md-3">
                             <a href="/superadmin/agenda/{{ $agenda->id_rapat }}" class="btn btn-md button-secondary" type="button" name="button">Detail</a>
                             <a href="/superadmin/agenda/{{ $agenda->id_rapat }}/edit" class="btn btn-md button-warning" type="button" name="button">Edit</a>
-                            <button class="btn btn-md button-primary" type="button" name="button">Arsipkan</button>
+                            <button class="btn btn-md button-primary btn-action-hapus" hapus-id="{{ $agenda->id_rapat }}" type="button" name="button">Hapus</button>
                         </td>
                     </tr>
                 @endforeach
@@ -56,6 +56,10 @@
     <script src="{{ url('js/data-tables/datatables.min.js') }}"></script>
     <script>
         $(document).ready(function () {
+            $('.btn-action-hapus').on('click', function (evt) {
+                console.log(evt.target.getAttribute('hapus-id'))
+            });
+
             $('#agenda-table').DataTable();
         });
     </script>
