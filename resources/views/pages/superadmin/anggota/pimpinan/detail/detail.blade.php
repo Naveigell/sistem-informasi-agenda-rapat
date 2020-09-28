@@ -16,6 +16,18 @@
                 <input type="text" disabled class="form-control" value="" placeholder="{{ $pimpinan->nama_pimpinan }}"/>
             </div>
         </div>
+        <div class="form-group row" style="margin-top: 10px;">
+            <label class="col-sm-2">Username</label>
+            <div class="col-sm-9">
+                <input type="text" disabled class="form-control" value="" placeholder="{{ $pimpinan->username }}"/>
+            </div>
+        </div>
+        <div class="form-group row" style="margin-top: 10px;">
+            <label class="col-sm-2">Email</label>
+            <div class="col-sm-9">
+                <input type="email" disabled class="form-control" value="" placeholder="{{ $pimpinan->email }}"/>
+            </div>
+        </div>
         <div class="form-group row">
             <label class="col-sm-2">Jabatan</label>
             <div class="col-sm-9">

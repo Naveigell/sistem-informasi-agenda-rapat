@@ -4,6 +4,7 @@ namespace App\Models\SuperAdmin;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder as QueryBuilder;
+use Illuminate\Support\Facades\Hash;
 
 /**
  * @mixin QueryBuilder
@@ -55,12 +56,15 @@ class PimpinanRapatModel extends Model {
      * @param $no_telp string
      * @return bool
      */
-    public function savePimpinanRapat($nama, $jabatan, $jenis_kelamin, $no_telp){
+    public function savePimpinanRapat($nama, $username, $email, $jabatan, $jenis_kelamin, $no_telp){
         return $this->insert([
             'nama_pimpinan'         => $nama,
+            'username'              => $username,
+            'email'                 => $email,
+            'password'              => Hash::make('123456'),
             'jabatan'               => $jabatan,
             'jenis_kelamin'         => $jenis_kelamin,
-            'no_telepon'               => $no_telp
+            'no_telepon'            => $no_telp
         ]);
     }
 }

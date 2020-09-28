@@ -31,8 +31,9 @@ Route::group(['prefix' => '/api'], function (){
 
     Route::post('/superadmin/agenda/insert', 'Api\SuperAdmin\AgendaController@insert');
     Route::post('/superadmin/agenda/update', 'Api\SuperAdmin\AgendaController@update');
+    Route::post('/superadmin/agenda/delete', 'Api\SuperAdmin\AgendaController@delete');
 
-    Route::post('/superadmin/anggota/insert', 'Api\SuperAdmin\AnggotaController@insert');
+    Route::post('/superadmin/anggota/pimpinan/insert', 'Api\SuperAdmin\Anggota\PimpinanController@insert');
     Route::post('/superadmin/anggota/pimpinan/update', 'Api\SuperAdmin\Anggota\PimpinanController@update');
     Route::post('/superadmin/anggota/pimpinan/delete', 'Api\SuperAdmin\Anggota\PimpinanController@delete');
 
@@ -67,15 +68,15 @@ Route::group(['prefix' => '/superadmin', 'middleware' => 'user'], function (){
     Route::get('/agenda/{id}/edit', 'Api\SuperAdmin\AgendaController@editView')->name('agenda.edit');
 
     Route::get('/anggota', 'Api\SuperAdmin\AnggotaController@showView')->name('anggota.index');
-    Route::get('/anggota/insert', 'Api\SuperAdmin\AnggotaController@insertView')->middleware('remove.cache')->name('anggota.insert');
 
     Route::get('/anggota/pimpinan', 'Api\SuperAdmin\Anggota\PimpinanController@showView')->name('anggota.pimpinan.index');
+    Route::get('/anggota/pimpinan/insert', 'Api\SuperAdmin\Anggota\PimpinanController@insertView')->middleware('remove.cache')->name('anggota.pimpinan.insert');
     Route::get('/anggota/pimpinan/{id}', 'Api\SuperAdmin\Anggota\PimpinanController@detailView')->name('anggota.pimpinan.detail');
     Route::get('/anggota/pimpinan/{id}/edit', 'Api\SuperAdmin\Anggota\PimpinanController@editView')->name('anggota.pimpinan.edit');
 
-    Route::get('/anggota/admin', 'Api\SuperAdmin\Anggota\AdminsController@showView');
-    Route::get('/anggota/admin/insert', 'Api\SuperAdmin\Anggota\AdminsController@insertView');
-    Route::get('/anggota/admin/{id}/edit', 'Api\SuperAdmin\Anggota\AdminsController@editView');
+    Route::get('/anggota/admin', 'Api\SuperAdmin\Anggota\AdminsController@showView')->name('anggota.admin.index');
+    Route::get('/anggota/admin/insert', 'Api\SuperAdmin\Anggota\AdminsController@insertView')->name('anggota.admin.insert');
+    Route::get('/anggota/admin/{id}/edit', 'Api\SuperAdmin\Anggota\AdminsController@editView')->name('anggota.admin.edit');
 
     Route::get('/profile', 'Api\SuperAdmin\ProfileController@showView')->name('profile.index');
 

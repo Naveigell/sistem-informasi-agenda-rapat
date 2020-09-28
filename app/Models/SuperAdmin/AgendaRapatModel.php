@@ -82,6 +82,10 @@ class AgendaRapatModel extends Model {
         ])->get();
     }
 
+    public function deleteAgenda($id) {
+        return $this->where('id_rapat', $id)->delete();
+    }
+
     /**
      * Relationship with Pimpinan Rapat
      *

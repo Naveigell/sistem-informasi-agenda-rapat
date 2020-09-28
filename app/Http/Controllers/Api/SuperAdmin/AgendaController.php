@@ -10,6 +10,7 @@ use App\Http\Requests\SuperAdmin\Agenda\AgendaUpdateRequest;
 use App\Models\SuperAdmin\AgendaRapatModel;
 use App\Models\SuperAdmin\PimpinanRapatModel;
 use App\Models\SuperAdmin\SuratRapatModel;
+use Illuminate\Http\Request;
 
 class AgendaController extends Controller {
 
@@ -77,6 +78,17 @@ class AgendaController extends Controller {
         }
 
         return redirect()->to('/superadmin/agenda')->with('success', 'Agenda berhasil dibuat');
+    }
+
+    public function delete(Request $request) {
+        $id = $request->id;
+
+        $deleted = $this->agendaRapatModel->deleteAgenda($id);
+        if (!$deleted) {
+            return response()->json(['Terjadi masalah saat menghapus agenda'], 500);
+        }
+
+        return response()->json(['Hapus agenda berhasil'], 200);
     }
 
     /**

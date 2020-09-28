@@ -41,7 +41,7 @@
                 @endforeach
             </tbody>
         </table>
-        <a href="insert" type="button" class="btn btn-md button-success" name="button">
+        <a href="pimpinan/insert" type="button" class="btn btn-md button-success" name="button">
             <i class="glyphicon-plus glyphicon"></i> &nbsp Tambah Anggota
         </a>
     </div>

@@ -1,5 +1,6 @@
 body, html {
-    background: var(--color-body-primary);
+    /*background: var(--color-body-primary);*/
+    background: #333;
 }
 
 .left-side-bar {
@@ -7,7 +8,9 @@ body, html {
     width: 250px;
     position: fixed;
     z-index: 2;
-    background: white;
+    /*background: white;*/
+    background: red;
+    color: white;
 }
 
 body > .left-side-bar > .sub-left-side-bar > a {
@@ -18,7 +21,8 @@ body > .left-side-bar > .sub-left-side-bar > a {
 .left-side-bar > a, .left-side-bar > .sub-left-side-bar > a {
     display: block;
     width: 100%;
-    color: #444;
+    /*color: #444;*/
+    color: white;
     font-size: 15px;
     text-decoration: none;
     padding-left: 30px;
@@ -28,13 +32,17 @@ body > .left-side-bar > .sub-left-side-bar > a {
 
 .left-side-bar .active {
     font-weight: bold;
-    border-left: 4px solid;
-    border-color: var(--color-primary-dark);
-    background: var(--color-body-primary);
+    /*border-left: 4px solid;*/
+    /*border-color: var(--color-primary-dark);*/
+    background: #333;
+    color: white;
+    /*background: var(--color-body-primary);*/
     padding-left: 26px;
 }
 
 .left-side-bar > .sub-left-side-bar > a:hover, .left-side-bar > a:hover {
-    background: var(--color-body-primary);
+    /*background: var(--color-body-primary);*/
+    background: #333;
     cursor: pointer;
+    color: white;
 }

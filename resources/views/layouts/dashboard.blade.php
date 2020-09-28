@@ -28,11 +28,21 @@
           </div>
       </header>
       @php
-        function is($name){
+        function first($name){
             $arr = explode('.', \Request::route()->getName());
             $first = reset($arr);
 
             return $name == $first;
+        }
+
+        function second($name) {
+            $arr = explode('.', \Request::route()->getName());
+
+            if (!(count($arr) > 1)) return false;
+
+            $second = $arr[1];
+
+            return $name == $second;
         }
       @endphp
       <div class="left-side-bar">
@@ -41,32 +51,28 @@
               <i class="glyphicon glyphicon-home" style="margin-right: 10px;"></i>
               Dashboard
           </a>
-          <a class="{{ is('anggota') ? 'active' : '' }}" parent-sub="anggota" style="cursor: pointer;">
+          <a class="{{ first('anggota') ? 'active' : '' }}" parent-sub="anggota" style="cursor: pointer;">
               <i class="glyphicon glyphicon-user" style="margin-right: 10px;"></i>
               Anggota
               <i class="glyphicon glyphicon-triangle-bottom" style="width: 1px; height: 1px; float: right; transform: translateX(-4000%)"></i>
           </a>
           <div class="sub-left-side-bar" child-sub="anggota">
-              <a href="/{{ session()->get('role') }}/anggota/admin">
+              <a href="/{{ session()->get('role') }}/anggota/admin" class="{{ second('admin') ? 'active' : '' }}">
                   Admin
               </a>
-              <a href="/{{ session()->get('role') }}/anggota/pimpinan">
+              <a href="/{{ session()->get('role') }}/anggota/pimpinan" class="{{ second('pimpinan') ? 'active' : '' }}">
                   Pimpinan Rapat
               </a>
           </div>
-          <a href="/{{ session()->get('role') }}/arsip" class="{{ is('arsip') ? 'active' : '' }}">
-              <i class="glyphicon glyphicon-th-list" style="margin-right: 10px;"></i>
-              Arsip
-          </a>
-          <a href="/{{ session()->get('role') }}/agenda" class="{{ is('agenda') ? 'active' : '' }}">
+          <a href="/{{ session()->get('role') }}/agenda" class="{{ first('agenda') ? 'active' : '' }}">
               <i class="glyphicon glyphicon-calendar" style="margin-right: 10px;"></i>
               Agenda
           </a>
-          <a href="/{{ session()->get('role') }}/surat" class="{{ is('surat') ? 'active' : '' }}">
+          <a href="/{{ session()->get('role') }}/surat" class="{{ first('surat') ? 'active' : '' }}">
               <i class="glyphicon glyphicon-file" style="margin-right: 10px;"></i>
               Surat
           </a>
-          <a href="/{{ session()->get('role') }}/profile"  class="{{ is('profile') ? 'active' : '' }}">
+          <a href="/{{ session()->get('role') }}/profile"  class="{{ first('profile') ? 'active' : '' }}">
               <i class="glyphicon glyphicon-cog" style="margin-right: 10px;"></i>
               Profil
           </a>

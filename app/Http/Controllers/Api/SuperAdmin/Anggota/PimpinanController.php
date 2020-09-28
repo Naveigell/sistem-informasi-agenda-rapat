@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\SuperAdmin\Anggota;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\SuperAdmin\Anggota\Pimpinan\PimpinanInsertRequest;
 use App\Http\Requests\SuperAdmin\Anggota\Pimpinan\PimpinanUpdateRequest;
 use App\Models\SuperAdmin\PimpinanRapatModel;
 use Illuminate\Http\Request;
@@ -56,6 +57,19 @@ class PimpinanController extends Controller {
         }
 
         return redirect()->to('/superadmin/anggota/pimpinan')->with('success', 'Mengubah data pimpinan rapat berhasil');
+    }
+
+    public function insert(PimpinanInsertRequest $request) {
+
+        $saved = $this->pimpinanRapatModel->savePimpinanRapat(
+            $request->nama, $request->username, $request->email, $request->jabatan, $request->jenis_kelamin, $request->telp
+        );
+
+        if ($saved) {
+            return redirect('/superadmin/anggota/pimpinan')->with('success', 'Tambah pimpinan berhasil');
+        }
+
+        return back()->with('error', 'Tambah data gagal')->withInput($request->all());
     }
 
     public function delete(Request $request) {

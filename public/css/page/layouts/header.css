@@ -1,8 +1,8 @@
 .header {
     width: calc(100% - 251px);
     position: fixed;
-    height: 60px;
-    background: var(--color-black-primary);
+    height: 120px;
+    background: red;
     left: 251px;
     z-index: 5;
     color: white;
@@ -52,11 +52,7 @@
 
 .header-account-option-container {
     width: 250px;
-    /*height: 50px;*/
     background: #ddd;
-    /*box-shadow: 1px 0px 3px 1px rgb(224, 225, 227);*/
-    /*padding-top: 5px;*/
-    /*padding-bottom: 5px;*/
     position: absolute;
     right: 0;
 }

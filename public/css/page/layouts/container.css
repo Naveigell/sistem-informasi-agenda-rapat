@@ -3,6 +3,9 @@
     margin-top: 70px;
     width: calc(100% - 270px);
     height: 100vh;
-    /* background: red; */
     position: absolute;
+}
+
+.body-section:first-child {
+    margin-top: 80px;
 }
