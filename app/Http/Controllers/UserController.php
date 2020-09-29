@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\SuperAdmin\LoginRequest;
+use App\Http\Requests\LoginRequest;
 use App\Models\User\UserModel;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -41,7 +41,7 @@ class UserController extends Controller {
      */
     public function logout() {
         if (Auth::guard('user')->destroy()) {
-            return back();
+            return redirect()->to('/login');
         }
     }
 

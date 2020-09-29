@@ -1,0 +1,24 @@
+.body-section-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    align-items: stretch;
+    background-color: red;
+}
+
+.body-section-container > .body-section {
+    /* display: inline-block; */
+    margin-top: 0;
+    width: calc((100% / 4) - 5px);
+    height: 100%;
+    text-align: center;
+}
+
+.body-section > div {
+    display: flex;
+    align-items: center;
+}

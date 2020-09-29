@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Api\SuperAdmin;
+namespace App\Http\Controllers\Api\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\SuperAdmin\Anggota\AnggotaInsertRequest;
-use App\Models\SuperAdmin\PimpinanRapatModel;
+use App\Http\Requests\Admin\Anggota\AnggotaInsertRequest;
+use App\Models\Admin\PimpinanRapatModel;
 
 class AnggotaController extends Controller {
 
@@ -15,14 +15,15 @@ class AnggotaController extends Controller {
     }
 
     public function showView() {
-        return view('pages.superadmin.anggota.anggota');
+        return view('pages.admin.anggota.anggota');
     }
 
     public function insertView(){
-        return view('pages.superadmin.anggota.insert');
+        return view('pages.admin.anggota.insert');
     }
 
     public function insert(AnggotaInsertRequest $request) {
+
 
     }
 }

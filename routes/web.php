@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,42 +15,70 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function (){
 //    var_dump(auth('user')->id());
-    return redirect()->to('/superadmin/agenda');
+    return redirect()->to('/login');
 });
 
-Route::get('/superadmin/login', function (){
+Route::get('/login', function (){
     return view('login');
 });
-
+Route::post('/api/login', 'UserController@login');
 Route::get('/logout', 'UserController@logout');
 
 // API ROUTE
-Route::group(['prefix' => '/api'], function (){
-    Route::post('/login', 'UserController@login');
+Route::group(['prefix' => '/api/superadmin'], function (){
 
-    Route::post('/superadmin/agenda/insert', 'Api\SuperAdmin\AgendaController@insert');
-    Route::post('/superadmin/agenda/update', 'Api\SuperAdmin\AgendaController@update');
-    Route::post('/superadmin/agenda/delete', 'Api\SuperAdmin\AgendaController@delete');
+    Route::post('/agenda/insert', 'Api\SuperAdmin\AgendaController@insert');
+    Route::post('/agenda/update', 'Api\SuperAdmin\AgendaController@update');
+    Route::post('/agenda/delete', 'Api\SuperAdmin\AgendaController@delete');
 
-    Route::post('/superadmin/anggota/pimpinan/insert', 'Api\SuperAdmin\Anggota\PimpinanController@insert');
-    Route::post('/superadmin/anggota/pimpinan/update', 'Api\SuperAdmin\Anggota\PimpinanController@update');
-    Route::post('/superadmin/anggota/pimpinan/delete', 'Api\SuperAdmin\Anggota\PimpinanController@delete');
+    Route::post('/anggota/pimpinan/insert', 'Api\SuperAdmin\Anggota\PimpinanController@insert');
+    Route::post('/anggota/pimpinan/update', 'Api\SuperAdmin\Anggota\PimpinanController@update');
+    Route::post('/anggota/pimpinan/delete', 'Api\SuperAdmin\Anggota\PimpinanController@delete');
 
-    Route::post('/superadmin/profile/update', 'Api\SuperAdmin\ProfileController@updateBiodata');
-    Route::post('/superadmin/profile/password/update', 'Api\SuperAdmin\ProfileController@updatePassword');
+    Route::post('/profile/update', 'Api\SuperAdmin\ProfileController@updateBiodata');
+    Route::post('/profile/password/update', 'Api\SuperAdmin\ProfileController@updatePassword');
 
-    Route::post('/superadmin/anggota/admin/insert', 'Api\SuperAdmin\Anggota\AdminsController@insert');
-    Route::post('/superadmin/anggota/admin/update', 'Api\SuperAdmin\Anggota\AdminsController@update');
-    Route::post('/superadmin/anggota/admin/delete', 'Api\SuperAdmin\Anggota\AdminsController@delete');
+    Route::post('/anggota/admin/insert', 'Api\SuperAdmin\Anggota\AdminsController@insert');
+    Route::post('/anggota/admin/update', 'Api\SuperAdmin\Anggota\AdminsController@update');
+    Route::post('/anggota/admin/delete', 'Api\SuperAdmin\Anggota\AdminsController@delete');
 
-    Route::post('/superadmin/surat/insert', 'Api\SuperAdmin\SuratController@insert');
-    Route::post('/superadmin/surat/update', 'Api\SuperAdmin\SuratController@update');
-    Route::post('/superadmin/surat/delete', 'Api\SuperAdmin\SuratController@delete');
+    Route::post('/surat/insert', 'Api\SuperAdmin\SuratController@insert');
+    Route::post('/surat/update', 'Api\SuperAdmin\SuratController@update');
+    Route::post('/surat/delete', 'Api\SuperAdmin\SuratController@delete');
 
-    Route::get('/superadmin/peserta/{id}', 'Api\SuperAdmin\PesertaController@getAt');
-    Route::post('/superadmin/peserta/update', 'Api\SuperAdmin\PesertaController@update');
-    Route::post('/superadmin/peserta/delete', 'Api\SuperAdmin\PesertaController@delete');
-    Route::post('/superadmin/peserta/insert', 'Api\SuperAdmin\PesertaController@insert');
+    Route::get('/peserta/{id}', 'Api\SuperAdmin\PesertaController@getAt');
+    Route::post('/peserta/update', 'Api\SuperAdmin\PesertaController@update');
+    Route::post('/peserta/delete', 'Api\SuperAdmin\PesertaController@delete');
+    Route::post('/peserta/insert', 'Api\SuperAdmin\PesertaController@insert');
+});
+
+
+// API ROUTE
+Route::group(['prefix' => '/api/admin'], function (){
+
+    Route::post('/agenda/insert', 'Api\Admin\AgendaController@insert');
+    Route::post('/agenda/update', 'Api\Admin\AgendaController@update');
+    Route::post('/agenda/delete', 'Api\Admin\AgendaController@delete');
+
+    Route::post('/anggota/pimpinan/insert', 'Api\Admin\Anggota\PimpinanController@insert');
+    Route::post('/anggota/pimpinan/update', 'Api\Admin\Anggota\PimpinanController@update');
+    Route::post('/anggota/pimpinan/delete', 'Api\Admin\Anggota\PimpinanController@delete');
+
+    Route::post('/profile/update', 'Api\Admin\ProfileController@updateBiodata');
+    Route::post('/profile/password/update', 'Api\Admin\ProfileController@updatePassword');
+
+    Route::post('/anggota/admin/insert', 'Api\Admin\Anggota\AdminsController@insert');
+    Route::post('/anggota/admin/update', 'Api\Admin\Anggota\AdminsController@update');
+    Route::post('/anggota/admin/delete', 'Api\Admin\Anggota\AdminsController@delete');
+
+    Route::post('/surat/insert', 'Api\Admin\SuratController@insert');
+    Route::post('/surat/update', 'Api\Admin\SuratController@update');
+    Route::post('/surat/delete', 'Api\Admin\SuratController@delete');
+
+    Route::get('/peserta/{id}', 'Api\Admin\PesertaController@getAt');
+    Route::post('/peserta/update', 'Api\Admin\PesertaController@update');
+    Route::post('/peserta/delete', 'Api\Admin\PesertaController@delete');
+    Route::post('/peserta/insert', 'Api\Admin\PesertaController@insert');
 });
 
 // ROUTE SUPERADMIN
@@ -79,10 +106,23 @@ Route::group(['prefix' => '/superadmin', 'middleware' => 'user'], function (){
     Route::get('/anggota/admin/{id}/edit', 'Api\SuperAdmin\Anggota\AdminsController@editView')->name('anggota.admin.edit');
 
     Route::get('/profile', 'Api\SuperAdmin\ProfileController@showView')->name('profile.index');
+});
 
-    Route::get('/pengaturan', 'Api\SuperAdmin\SettingController@showView');
+// ROUTE ADMIN
+Route::group(['prefix' => '/admin', 'middleware' => 'user'], function (){
 
-    Route::get('/arsip', function () {
-        return view('pages.superadmin.arsip.arsip');
-    })->name('arsip.index');
+    Route::get('/agenda', 'Api\Admin\AgendaController@showView')->middleware('remove.cache')->name('agenda.index');
+    Route::get('/agenda/insert', 'Api\Admin\AgendaController@insertView')->name('agenda.insert');
+    Route::get('/agenda/{id}', 'Api\Admin\AgendaController@detailView')->name('agenda.detail');
+    Route::get('/agenda/{id}/edit', 'Api\Admin\AgendaController@editView')->name('agenda.edit');
+
+    Route::get('/anggota/pimpinan', 'Api\Admin\Anggota\PimpinanController@showView')->name('anggota.pimpinan.index');
+    Route::get('/anggota/pimpinan/{id}', 'Api\Admin\Anggota\PimpinanController@detailView')->name('anggota.pimpinan.detail');
+
+    Route::get('/surat', 'Api\Admin\SuratController@showView')->name('surat.index');
+    Route::get('/surat/{id}', 'Api\Admin\SuratController@detailView')->name('surat.detail');
+
+    Route::get('/anggota/admin', 'Api\Admin\Anggota\AdminsController@showView')->name('anggota.admin.index');
+
+    Route::get('/profile', 'Api\Admin\ProfileController@showView')->name('profile.index');
 });

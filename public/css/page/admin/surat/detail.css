@@ -1,0 +1,15 @@
+.mail-date {
+    text-align: right;
+}
+
+.mail-detail tr > td:nth-child(even) {
+    padding-left: 10px;
+}
+
+.mail-from {
+    float: right;
+}
+
+.mail-from-text {
+    text-align: center;
+}

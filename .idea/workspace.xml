@@ -3,18 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2bb49978-79e2-481d-8765-ba3cde3e3a66" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/AgendaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/AgendaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/Anggota/PimpinanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/Anggota/PimpinanController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/SuperAdmin/AgendaRapatModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/SuperAdmin/AgendaRapatModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/SuperAdmin/PimpinanRapatModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/SuperAdmin/PimpinanRapatModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/page/layouts/container.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/page/layouts/container.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/page/layouts/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/page/layouts/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/page/layouts/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/page/layouts/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/agenda/agenda.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/agenda/agenda.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/detail/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/detail/detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/insert/insert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/insert/insert.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/pimpinan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/pimpinan.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/AnggotaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/AnggotaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/SuperAdmin/LoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/LoginRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +37,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js/jquery" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css/page/admin" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="DEFAULT" />
@@ -53,15 +45,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\public\js\jquery" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Requests" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\resources\views\pages\superadmin\anggota\admin\edit" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Models\SuperAdmin" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Controllers\Api\SuperAdmin\Anggota" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Middleware\App" />
-      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Requests\SuperAdmin\Peserta" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\public\css\page\admin" />
+      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Requests\Admin" />
+      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Models\Admin" />
+      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Controllers\Api\Admin" />
+      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\resources\views\pages\admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -129,7 +125,8 @@
       <workItem from="1601264634360" duration="12000" />
       <workItem from="1601271716868" duration="637000" />
       <workItem from="1601273954767" duration="2123000" />
-      <workItem from="1601294751889" duration="2151000" />
+      <workItem from="1601294751889" duration="5533000" />
+      <workItem from="1601351647799" duration="1555000" />
     </task>
     <servers />
   </component>

@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Api\SuperAdmin;
+namespace App\Http\Controllers\Api\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\SuperAdmin\Profile\ProfileBiodataUpdateRequest;
-use App\Http\Requests\SuperAdmin\Profile\ProfilePasswordUpdateRequest;
-use App\Models\SuperAdmin\ProfileModel;
-use Illuminate\Http\Request;
+use App\Http\Requests\Admin\Profile\ProfileBiodataUpdateRequest;
+use App\Http\Requests\Admin\Profile\ProfilePasswordUpdateRequest;
+use App\Models\Admin\ProfileModel;
 use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller {
@@ -21,7 +20,7 @@ class ProfileController extends Controller {
 
         $profile = $this->profileModel->getWithId(session()->get('id'));
 
-        return view('pages.superadmin.profile.profile', compact('profile'));
+        return view('pages.admin.profile.profile', compact('profile'));
     }
 
     public function updateBiodata(ProfileBiodataUpdateRequest $request) {

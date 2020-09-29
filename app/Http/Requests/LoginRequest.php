@@ -1,11 +1,8 @@
 <?php
 
-namespace App\Http\Requests\SuperAdmin;
+namespace App\Http\Requests;
 
-use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
-use App\Exceptions\ValidatorExceptionRequest;
-use Illuminate\Validation\ValidationException;
 
 class LoginRequest extends FormRequest
 {
