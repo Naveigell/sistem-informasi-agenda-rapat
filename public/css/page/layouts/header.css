@@ -9,10 +9,22 @@
     display: flex;
 }
 
+.header-title {
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .header > .header-account {
     height: 100%;
     margin-left: auto;
-    padding-left: 10px;
+    padding-left: 25px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -47,7 +59,7 @@
 .header-account-option {
     width: 100%;
     position: absolute;
-    top: 60px;
+    top: 118px;
 }
 
 .header-account-option-container {

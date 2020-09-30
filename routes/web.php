@@ -126,3 +126,17 @@ Route::group(['prefix' => '/admin', 'middleware' => 'user'], function (){
 
     Route::get('/profile', 'Api\Admin\ProfileController@showView')->name('profile.index');
 });
+
+Route::group(['prefix' => '/api/user'], function (){
+    Route::post('/profile/update', 'Api\User\ProfileController@updateBiodata');
+    Route::post('/profile/password/update', 'Api\User\ProfileController@updatePassword');
+});
+
+// ROUTE USER
+Route::group(['prefix' => '/user', 'middleware' => 'user'], function (){
+
+    Route::get('/agenda', 'Api\User\AgendaController@showView')->name('agenda.index');
+    Route::get('/agenda/{id}', 'Api\User\AgendaController@detailView')->name('agenda.detail');
+
+    Route::get('/profile', 'Api\User\ProfileController@showView')->name('profile.index');
+});

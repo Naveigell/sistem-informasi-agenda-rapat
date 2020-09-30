@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginRequest;
-use App\Models\User\UserModel;
+use App\Models\PimpinanModel;
+use App\Models\UserModel;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -55,11 +56,17 @@ class UserController extends Controller {
      */
     public function login(LoginRequest $request){
 
-        $email      = $request->email;
+        $nip        = $request->nip;
         $password   = $request->password;
 
-        $model = new UserModel;
-        $user = $model->login($email, $password);
+        $model = null;
+        if ($request->pimpinan == null) {
+            $model = new UserModel;
+        }
+        else {
+            $model = new PimpinanModel;
+        }
+        $user = $model->login($nip, $password);
 
         if ($user->exists()) {
             $user = $user->first();
@@ -69,13 +76,16 @@ class UserController extends Controller {
                 //
                 // Simpan data kedalam Session setelah memvalidasi password
 
-                Auth::guard('user')->store($user->id_user, $user->username, $user->role);
-                return redirect($user->role.'/agenda');
+                $id = $user->id_user == null ? $user->id_pimpinan_rapat : $user->id_user;
+                $role = $request->pimpinan == null ? $user->role : 'user';
+
+                Auth::guard('user')->store($id, $user->username, $role);
+                return redirect($role.'/agenda');
             }
 
             return $this->back('password', 'Password salah');
         }
 
-        return $this->back('email', 'Pengguna tidak ditemukan');
+        return $this->back('nip', 'Pengguna tidak ditemukan');
     }
 }

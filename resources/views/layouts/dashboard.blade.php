@@ -13,6 +13,7 @@
   </head>
   <body>
       <header class="header">
+          <span class="header-title">BADAN PERANCANGAN PEMBANGUNAN <br/> DAERAH PROVINSI BALI</span>
           <div class="header-account">
               <img src="{{ url('/img/default/avatar.png') }}" alt="">
               <span class="header-account-username">{{ session()->get('username') }}</span>
@@ -51,27 +52,31 @@
               <i class="glyphicon glyphicon-home" style="margin-right: 10px;"></i>
               Dashboard
           </a>
-          <a class="{{ first('anggota') ? 'active' : '' }}" parent-sub="anggota" style="cursor: pointer;">
-              <i class="glyphicon glyphicon-user" style="margin-right: 10px;"></i>
-              Anggota
-              <i class="glyphicon glyphicon-triangle-bottom" style="width: 1px; height: 1px; float: right; transform: translateX(-4000%)"></i>
-          </a>
-          <div class="sub-left-side-bar" child-sub="anggota">
-              <a href="/{{ session()->get('role') }}/anggota/admin" class="{{ second('admin') ? 'active' : '' }}">
-                  Admin
+          @if(session()->get('role') != 'user')
+              <a class="{{ first('anggota') ? 'active' : '' }}" parent-sub="anggota" style="cursor: pointer;">
+                  <i class="glyphicon glyphicon-user" style="margin-right: 10px;"></i>
+                  Anggota
+                  <i class="glyphicon glyphicon-triangle-bottom" style="width: 1px; height: 1px; float: right; transform: translateX(-4000%)"></i>
               </a>
-              <a href="/{{ session()->get('role') }}/anggota/pimpinan" class="{{ second('pimpinan') ? 'active' : '' }}">
-                  Pimpinan Rapat
-              </a>
-          </div>
+              <div class="sub-left-side-bar" child-sub="anggota">
+                  <a href="/{{ session()->get('role') }}/anggota/admin" class="{{ second('admin') ? 'active' : '' }}">
+                      Admin
+                  </a>
+                  <a href="/{{ session()->get('role') }}/anggota/pimpinan" class="{{ second('pimpinan') ? 'active' : '' }}">
+                      Pimpinan Rapat
+                  </a>
+              </div>
+          @endif
           <a href="/{{ session()->get('role') }}/agenda" class="{{ first('agenda') ? 'active' : '' }}">
               <i class="glyphicon glyphicon-calendar" style="margin-right: 10px;"></i>
               Agenda
           </a>
-          <a href="/{{ session()->get('role') }}/surat" class="{{ first('surat') ? 'active' : '' }}">
-              <i class="glyphicon glyphicon-file" style="margin-right: 10px;"></i>
-              Surat
-          </a>
+          @if(session()->get('role') != 'user')
+              <a href="/{{ session()->get('role') }}/surat" class="{{ first('surat') ? 'active' : '' }}">
+                  <i class="glyphicon glyphicon-file" style="margin-right: 10px;"></i>
+                  Surat
+              </a>
+          @endif
           <a href="/{{ session()->get('role') }}/profile"  class="{{ first('profile') ? 'active' : '' }}">
               <i class="glyphicon glyphicon-cog" style="margin-right: 10px;"></i>
               Profil

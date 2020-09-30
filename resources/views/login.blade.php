@@ -20,12 +20,12 @@
                   <input id="password-input" name="password" value="{{ old('password') }}" type="password" placeholder="*****"/> <br/><br/>
                   <div class="display">
                       <div class="left-display">
-                          <input type="checkbox"/>
+                          <input name="pimpinan" type="checkbox"/>
                           <span>Login pimpinan</span>
                       </div>
-                      <div class="right-display">
-                          <a href="forget">Lupa Password?</a>
-                      </div>
+{{--                      <div class="right-display">--}}
+{{--                          <a href="forget">Lupa Password?</a>--}}
+{{--                      </div>--}}
                   </div>
                   @if($errors->has('email'))
                       <span class="error-message">{{ $errors->first('email') }}</span>

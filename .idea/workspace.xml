@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2bb49978-79e2-481d-8765-ba3cde3e3a66" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/AnggotaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/AnggotaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/ProfileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/SuperAdmin/LoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/LoginRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/RandomSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/RandomSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/page/layouts/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/page/layouts/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css/page/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests/User" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="DEFAULT" />
@@ -46,18 +47,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Models" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Requests" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\resources\views\pages\superadmin\anggota\admin\edit" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Models\SuperAdmin" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Controllers\Api\SuperAdmin\Anggota" />
-      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Middleware\App" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Requests\User" />
+      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\resources\views\pages\user" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\public\css\page\admin" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Requests\Admin" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Models\Admin" />
-      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Controllers\Api\Admin" />
-      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\resources\views\pages\admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -126,7 +127,9 @@
       <workItem from="1601271716868" duration="637000" />
       <workItem from="1601273954767" duration="2123000" />
       <workItem from="1601294751889" duration="5533000" />
-      <workItem from="1601351647799" duration="1555000" />
+      <workItem from="1601351647799" duration="6401000" />
+      <workItem from="1601381427501" duration="3987000" />
+      <workItem from="1601448989134" duration="4719000" />
     </task>
     <servers />
   </component>
@@ -150,10 +153,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="518" y="61" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1600605803534" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601294980256">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601353360849">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601294980256" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601353360849" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601384294910">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601384294910" />
     <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1600088299349">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

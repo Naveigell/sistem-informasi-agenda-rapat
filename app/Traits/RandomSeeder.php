@@ -16,6 +16,10 @@ trait RandomSeeder {
         return $data[mt_rand(0, count($data) - 1)];
     }
 
+    public function nip(){
+        return rand(111111111111111111, 999999999999999999);
+    }
+
     /**
      * Multiple generate random string, normally to get random name
      *
