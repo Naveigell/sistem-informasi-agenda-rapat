@@ -44,13 +44,14 @@ class PimpinanRapatSeeder extends Seeder {
 
             $email = strtolower(str_replace(' ', '', str_replace(" ", $separator, $nama).rand(0, 9999)."@".$this->random($prefix)));
 
-            $adminExists = $admins->where('email', $email)->exists();
+            $nip = $this->nip();
+            $adminExists = $admins->where('nip', $nip)->exists();
 
             if ($adminExists) continue;
 
             $pimpinanRapat->insertOrIgnore([
                 'username'      => strtolower(str_replace(" ", $separator, $nama)),
-                'email'         => $email,
+                'nip'           => $nip,
                 'password'      => Hash::make('123456'),
                 'nama_pimpinan' => $nama,
                 'jabatan'       => 'Birokrat',

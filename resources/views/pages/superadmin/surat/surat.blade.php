@@ -6,7 +6,7 @@
 @endsection
 
 @section('body')
-    <div class="body-section">
+    <div class="body-section logo-background">
         <h4 style="font-weight: bold;">Surat</h4>
     </div>
 

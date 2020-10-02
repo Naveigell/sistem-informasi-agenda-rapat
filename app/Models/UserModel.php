@@ -21,13 +21,13 @@ class UserModel extends Model {
      * Fungsi untuk mengambil id_user, role dan password dari
      * database dan kemudian memvalidasinya di controller
      *
-     * @param string $email
+     * @param string $nip
      * @param string $password
      * @return \App\Models\UserModel
      */
-    public function login(string $email, string $password) {
+    public function login(string $nip, string $password) {
         return $this->select(['id_user', 'username', 'role', 'password'])->where([
-            'email'     => $email
+            'nip'     => $nip
         ]);
     }
 }

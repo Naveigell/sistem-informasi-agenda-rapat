@@ -12,7 +12,7 @@
 
     <div class="body-section" style="padding-bottom: 30px;">
         <h3>Biodata</h3>
-        <form action="/api/superadmin/profile/update" method="POST" style="margin-right: 10px;">
+        <form action="/api/admin/profile/update" method="POST" style="margin-right: 10px;">
             @csrf
             <div class="form-group row" style="margin-top: 40px;">
                 <label class="col-sm-2">Username</label>
@@ -21,9 +21,9 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2">Email</label>
+                <label class="col-sm-2">Nip</label>
                 <div class="col-sm-9">
-                    <input name="email" type="email" class="form-control" value="{{ old('email') == null ? $profile->email : old('email') }}" placeholder="Tulis Email Disini"/>
+                    <input disabled type="text" class="form-control" value="{{ $profile->nip }}" placeholder="Tulis Nip Disini"/>
                 </div>
             </div>
             <div class="form-group row">

@@ -17,7 +17,7 @@ class CreatePimpinanRapatTable extends Migration
                 $table->bigIncrements('id_pimpinan_rapat');
                 $table->string('nama_pimpinan', 60);
                 $table->string('username', 30);
-                $table->string('email', 70);
+                $table->string('nip', 70);
                 $table->string('password', 100);
                 $table->string('jabatan');
                 $table->enum('jenis_kelamin', ['Laki - laki', 'Perempuan']);

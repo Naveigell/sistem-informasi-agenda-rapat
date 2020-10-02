@@ -64,3 +64,9 @@ body, html {
     font-size: 14px;
     color: var(--color-primary-dark);
 }
+
+@media (max-width: 992px) {
+    .body-section {
+        width: 992px;
+    }
+}

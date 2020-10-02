@@ -3,6 +3,11 @@
 @section('styles')
     <link rel="stylesheet" href="{{ url('/css/page/superadmin/surat/surat.css') }}">
     <link rel="stylesheet" href="{{ url('/js/data-tables/datatables.min.css') }}">
+    <style>
+        #surat-table {
+
+        }
+    </style>
 @endsection
 
 @section('body')
@@ -10,7 +15,7 @@
         <h4 style="font-weight: bold;">Surat</h4>
     </div>
 
-    <div class="body-section">
+    <div class="body-section logo-background">
         <h2>List Surat</h2>
         <input id="_token" type="text" hidden value="{{ csrf_token() }}">
         <br/>

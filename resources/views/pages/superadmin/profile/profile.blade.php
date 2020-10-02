@@ -21,9 +21,9 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2">Email</label>
+                <label class="col-sm-2">Nip</label>
                 <div class="col-sm-9">
-                    <input name="email" type="email" class="form-control" value="{{ old('email') == null ? $profile->email : old('email') }}" placeholder="Tulis Email Disini"/>
+                    <input disabled type="text" class="form-control" value="{{ $profile->nip }}" placeholder="Tulis Nip Disini"/>
                 </div>
             </div>
             <div class="form-group row">

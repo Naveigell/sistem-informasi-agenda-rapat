@@ -47,7 +47,7 @@ class AdminsController extends Controller {
     }
 
     public function insert(AdminInsertRequest $request){
-        $saved = $this->adminModel->createAdmin($request->username, $request->email);
+        $saved = $this->adminModel->createAdmin($request->username, $request->nip);
         if (!$saved) {
             return back()->with('error', 'Terjadi masalah saat menambah admin');
         }

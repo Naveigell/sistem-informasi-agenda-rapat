@@ -23,9 +23,9 @@
             </div>
         </div>
         <div class="form-group row" style="margin-top: 10px;">
-            <label class="col-sm-2">Email</label>
+            <label class="col-sm-2">Nip</label>
             <div class="col-sm-9">
-                <input type="email" disabled class="form-control" value="" placeholder="{{ $pimpinan->email }}"/>
+                <input type="text" disabled class="form-control" value="" placeholder="{{ $pimpinan->nip }}"/>
             </div>
         </div>
         <div class="form-group row">

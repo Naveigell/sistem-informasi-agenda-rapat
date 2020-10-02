@@ -19,6 +19,12 @@
                     <input name="nama" type="text" class="form-control" value="{{ old('nama') == null ? $pimpinan->nama_pimpinan : old('nama') }}" placeholder="Tulis nama pimpinan disini"/>
                 </div>
             </div>
+            <div class="form-group row" style="margin-top: 10px;">
+                <label class="col-sm-2">Nip</label>
+                <div class="col-sm-9">
+                    <input name="nip" disabled type="text" class="form-control" value="{{ old('nip') == null ? $pimpinan->nip : old('nip') }}" placeholder="Tulis nip pimpinan disini"/>
+                </div>
+            </div>
             <div class="form-group row">
                 <label class="col-sm-2">Jabatan</label>
                 <div class="col-sm-9">

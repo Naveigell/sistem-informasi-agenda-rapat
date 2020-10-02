@@ -26,7 +26,7 @@ class ProfileController extends Controller {
     public function updateBiodata(ProfileBiodataUpdateRequest $request) {
 
         $updated = $this->profileModel->updateBiodata(
-            session()->get('id'), $request->username, $request->email
+            session()->get('id'), $request->username
         );
 
         if (!$updated) {

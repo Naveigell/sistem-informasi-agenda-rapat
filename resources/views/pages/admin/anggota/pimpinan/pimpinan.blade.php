@@ -11,7 +11,7 @@
         <input type="text" id="_token" hidden value="{{ csrf_token() }}">
     </div>
 
-    <div class="body-section">
+    <div class="body-section logo-background">
         <h4>List Pimpinan Rapat</h4> <br/>
         <table id="anggota-table" style="margin-top: 30px; font-size: 15px;" class="table ">
             <thead>

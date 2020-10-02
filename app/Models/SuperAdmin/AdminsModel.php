@@ -22,10 +22,10 @@ class AdminsModel extends Model {
         ]);
     }
 
-    public function createAdmin($username, $email) {
+    public function createAdmin($username, $nip) {
         return $this->insert([
             'username'      => $username,
-            'email'         => $email,
+            'nip'           => $nip,
             'password'      => Hash::make('123456')
         ]);
     }

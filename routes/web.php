@@ -81,8 +81,15 @@ Route::group(['prefix' => '/api/admin'], function (){
     Route::post('/peserta/insert', 'Api\Admin\PesertaController@insert');
 });
 
+Route::group(['prefix' => '/api/user'], function (){
+    Route::post('/profile/update', 'Api\User\ProfileController@updateBiodata');
+    Route::post('/profile/password/update', 'Api\User\ProfileController@updatePassword');
+});
+
 // ROUTE SUPERADMIN
 Route::group(['prefix' => '/superadmin', 'middleware' => 'user'], function (){
+
+    Route::get('/dashboard', 'Api\SuperAdmin\DashboardController@showView')->name('dashboard');
 
     Route::get('/surat', 'Api\SuperAdmin\SuratController@showView')->name('surat.index');
     Route::get('/surat/insert', 'Api\SuperAdmin\SuratController@insertView')->name('surat.insert');
@@ -111,6 +118,8 @@ Route::group(['prefix' => '/superadmin', 'middleware' => 'user'], function (){
 // ROUTE ADMIN
 Route::group(['prefix' => '/admin', 'middleware' => 'user'], function (){
 
+    Route::get('/dashboard', 'Api\Admin\DashboardController@showView')->name('dashboard');
+
     Route::get('/agenda', 'Api\Admin\AgendaController@showView')->middleware('remove.cache')->name('agenda.index');
     Route::get('/agenda/insert', 'Api\Admin\AgendaController@insertView')->name('agenda.insert');
     Route::get('/agenda/{id}', 'Api\Admin\AgendaController@detailView')->name('agenda.detail');
@@ -127,13 +136,10 @@ Route::group(['prefix' => '/admin', 'middleware' => 'user'], function (){
     Route::get('/profile', 'Api\Admin\ProfileController@showView')->name('profile.index');
 });
 
-Route::group(['prefix' => '/api/user'], function (){
-    Route::post('/profile/update', 'Api\User\ProfileController@updateBiodata');
-    Route::post('/profile/password/update', 'Api\User\ProfileController@updatePassword');
-});
-
 // ROUTE USER
 Route::group(['prefix' => '/user', 'middleware' => 'user'], function (){
+
+    Route::get('/dashboard', 'Api\User\DashboardController@showView')->name('dashboard');
 
     Route::get('/agenda', 'Api\User\AgendaController@showView')->name('agenda.index');
     Route::get('/agenda/{id}', 'Api\User\AgendaController@detailView')->name('agenda.detail');

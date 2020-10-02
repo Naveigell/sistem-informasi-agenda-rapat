@@ -24,10 +24,9 @@ class AdminInsertRequest extends FormRequest {
             'username.min'                  => 'Panjang karakter username minimal 6',
             'username.max'                  => 'Panjang karakter username maksimal 35',
 
-            'email.required'                => 'Email harus diisi',
-            'email.email'                   => 'Format email salah',
-            'email.min'                     => 'Panjang karakter email minimal 6',
-            'email.max'                     => 'Panjang karakter email maksimal 50'
+            'nip.required'                  => 'Nip harus diisi',
+            'nip.min'                       => 'Panjang karakter nip minimal 6',
+            'nip.max'                       => 'Panjang karakter nip maksimal 50'
         ];
     }
 
@@ -40,7 +39,7 @@ class AdminInsertRequest extends FormRequest {
     public function rules() {
         return [
             'username'          => 'required|string|no_spaces|min:6|max:35',
-            'email'             => 'required|string|email|min:6|max:50'
+            'nip'               => 'required|string|min:6|max:50'
         ];
     }
 }

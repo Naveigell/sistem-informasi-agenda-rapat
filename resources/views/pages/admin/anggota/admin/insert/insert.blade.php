@@ -10,7 +10,7 @@
     </div>
 
     <div class="body-section">
-        <form action="/api/superadmin/anggota/admin/insert" method="POST">
+        <form action="/api/admin/anggota/admin/insert" method="POST">
             @csrf
             <div class="form-group row" style="margin-top: 10px;">
                 <label class="col-sm-2">Username</label>

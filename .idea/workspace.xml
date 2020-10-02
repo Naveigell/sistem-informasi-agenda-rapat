@@ -2,12 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bb49978-79e2-481d-8765-ba3cde3e3a66" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/DashboardController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/DashboardController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/User/DashboardController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/logo_bappeda.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/admin/dashboard/dashboard.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/dashboard/dashboard.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/user/dashboard/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/Anggota/AdminsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/Anggota/AdminsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/User/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/User/ProfileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Traits/RandomSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/RandomSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/App/UserMiddleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/App/UserMiddleware.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/Profile/ProfileBiodataUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/Profile/ProfileBiodataUpdateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/LoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/LoginRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/SuperAdmin/Anggota/Admin/AdminInsertRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/SuperAdmin/Anggota/Admin/AdminInsertRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/SuperAdmin/Profile/ProfileBiodataUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/SuperAdmin/Profile/ProfileBiodataUpdateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/User/Profile/ProfileBiodataUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/User/Profile/ProfileBiodataUpdateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Admin/ProfileModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin/ProfileModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/PimpinanModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/PimpinanModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/SuperAdmin/AdminsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/SuperAdmin/AdminsModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/SuperAdmin/ProfileModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/SuperAdmin/ProfileModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User/ProfileModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User/ProfileModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/UserModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_17_090701_create_pimpinan_rapat_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_17_090701_create_pimpinan_rapat_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/PimpinanRapatSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PimpinanRapatSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/page/layouts/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/page/layouts/dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/page/layouts/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/page/layouts/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/401.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/401.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/404.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/agenda/agenda.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/agenda/agenda.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/anggota/admin/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/anggota/admin/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/anggota/admin/edit/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/anggota/admin/edit/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/anggota/admin/insert/insert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/anggota/admin/insert/insert.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/anggota/pimpinan/pimpinan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/anggota/pimpinan/pimpinan.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/profile/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/profile/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/surat/surat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/surat/surat.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/agenda/agenda.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/agenda/agenda.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/admin/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/admin/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/admin/edit/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/admin/edit/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/admin/insert/insert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/admin/insert/insert.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/detail/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/detail/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/edit/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/edit/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/pimpinan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/pimpinan.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/profile/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/profile/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/surat/surat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/surat/surat.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/user/agenda/agenda.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/user/agenda/agenda.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/user/profile/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/user/profile/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +88,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests/User" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="DEFAULT" />
@@ -46,19 +96,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\public\img" />
+      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\resources\views\pages\user" />
+      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\resources\views\pages\superadmin" />
+      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Requests\User" />
+      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\public\css\page\admin" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Models" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Requests" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\resources\views\pages\superadmin\anggota\admin\edit" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Models\SuperAdmin" />
       <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Controllers\Api\SuperAdmin\Anggota" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Requests\User" />
-      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\resources\views\pages\user" />
-      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\public\css\page\admin" />
-      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Http\Requests\Admin" />
-      <recent name="D:\Application\Project\PHP\Laravel\sistem-informasi-agenda-rapat\app\Models\Admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -129,7 +179,15 @@
       <workItem from="1601294751889" duration="5533000" />
       <workItem from="1601351647799" duration="6401000" />
       <workItem from="1601381427501" duration="3987000" />
-      <workItem from="1601448989134" duration="4719000" />
+      <workItem from="1601448989134" duration="5148000" />
+      <workItem from="1601466574767" duration="5441000" />
+      <workItem from="1601535696844" duration="335000" />
+      <workItem from="1601537219813" duration="2886000" />
+      <workItem from="1601549592723" duration="212000" />
+      <workItem from="1601552600725" duration="2690000" />
+      <workItem from="1601555753853" duration="365000" />
+      <workItem from="1601557395863" duration="1310000" />
+      <workItem from="1601617833594" duration="3144000" />
     </task>
     <servers />
   </component>
@@ -157,10 +215,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601353360849" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601384294910">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601553253882">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601384294910" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601553253882" />
     <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1600088299349">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -169,14 +227,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="489" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1600748450072" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1601211538580">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1601468986008">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1601211538580" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1600775685649">
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1601468986008" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1601556065135">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600775685649" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601556065135" />
     <state x="585" y="101" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600578641923">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

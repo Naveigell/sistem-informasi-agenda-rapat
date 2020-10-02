@@ -28,7 +28,7 @@
             <div class="form-group row">
                 <label class="col-sm-2">Email</label>
                 <div class="col-sm-9">
-                    <input disabled type="email" class="form-control" value="{{ $admin['email'] }}" placeholder="Tulis Email Disini"/>
+                    <input disabled type="text" class="form-control" value="{{ $admin['nip'] }}" placeholder="Tulis Nip Disini"/>
                 </div>
             </div>
             <div class="form-group row">
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <span class="error-message">
-                {{ error_check(['username', 'email'], $errors) }}
+                {{ error_check(['username'], $errors) }}
                 {{ session()->has('error') ? session()->get('error') : null }}
             </span>
             <br/>

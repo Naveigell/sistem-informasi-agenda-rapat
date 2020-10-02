@@ -27,11 +27,6 @@ class ProfileBiodataUpdateRequest extends FormRequest {
             'username.min'                  => 'Panjang karakter username minimal 6',
             'username.max'                  => 'Panjang karakter username maksimal 35',
 
-            'email.required'                => 'Email harus diisi',
-            'email.email'                   => 'Format email salah',
-            'email.min'                     => 'Panjang karakter email minimal 8',
-            'email.max'                     => 'Panjang karakter email maksimal 50',
-
             'jabatan.required'              => 'Jabatan harus diisi',
             'jabatan.min'                   => 'Panjang karakter jabatan minimal 3',
             'jabatan.max'                   => 'Panjang karakter jabatan maksimal 255',
@@ -55,7 +50,6 @@ class ProfileBiodataUpdateRequest extends FormRequest {
         return [
             'name'                  => 'required|string|min:6|max:60',
             'username'              => 'required|string|min:6|max:35',
-            'email'                 => 'required|string|email|min:8|max:50',
             'jabatan'               => 'required|string|min:3|max:255',
             'jenis_kelamin'         => 'required|string|in:Laki - laki,Perempuan',
             'no_telepon'            => 'required|string|min:7|max:17'

@@ -11,7 +11,7 @@
         <input type="text" id="_token" value="{{ csrf_token() }}" hidden>
     </div>
 
-    <div class="body-section">
+    <div class="body-section logo-background">
         <h2>List Agenda Rapat</h2>
         <br/>
         <table id="agenda-table" style="margin-top: 30px; font-size: 15px;" class="table ">

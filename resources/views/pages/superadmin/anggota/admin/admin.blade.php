@@ -11,14 +11,14 @@
         <input type="text" id="_token" hidden value="{{ csrf_token() }}">
     </div>
 
-    <div class="body-section">
+    <div class="body-section logo-background">
         <h4>List Admin</h4>
         <table id="admin-table" style="margin-top: 30px; font-size: 15px;" class="table ">
             <thead>
             <tr>
                 <th scope="col">No</th>
                 <th scope="col">Username</th>
-                <th scope="col">Email</th>
+                <th scope="col">Nip</th>
                 <th scope="col">Wewenang</th>
                 <th scope="col">Aksi</th>
             </tr>
@@ -28,7 +28,7 @@
                 <tr>
                     <th scope="row">{{ $number++ }}</th>
                     <td>{{ $admin->username }}</td>
-                    <td>{{ $admin->email }}</td>
+                    <td>{{ $admin->nip }}</td>
                     <td>{{ $admin->role }}</td>
                     <td class="col-md-3">
                         <a href="admin/{{ $admin->id_user }}/edit" class="btn btn-md button-warning" type="button">Edit</a>

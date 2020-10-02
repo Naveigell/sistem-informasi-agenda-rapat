@@ -12,9 +12,9 @@
           <div class="login-container" >
               <form class="login-form" method="post" action="/api/login">
                   @csrf
-                  <h2>Account Login</h2>
-                  <label>Email</label>
-                  <input id="email-input" name="email" value="{{ old('email') }}" type="text" placeholder="johndoe@microservice.com"/>
+                  <h2>Login Bappeda</h2>
+                  <label>Nip</label>
+                  <input id="email-input" name="nip" value="{{ old('nip') }}" type="text" placeholder="199405012015051001"/>
                   <br/><br/>
                   <label>Password</label>
                   <input id="password-input" name="password" value="{{ old('password') }}" type="password" placeholder="*****"/> <br/><br/>
@@ -27,8 +27,8 @@
 {{--                          <a href="forget">Lupa Password?</a>--}}
 {{--                      </div>--}}
                   </div>
-                  @if($errors->has('email'))
-                      <span class="error-message">{{ $errors->first('email') }}</span>
+                  @if($errors->has('nip'))
+                      <span class="error-message">{{ $errors->first('nip') }}</span>
                   @elseif($errors->has('password'))
                       <span class="error-message">{{ $errors->first('password') }}</span>
                   @endif

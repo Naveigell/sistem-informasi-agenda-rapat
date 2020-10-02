@@ -23,7 +23,7 @@ class UserMiddleware {
                 return $next($request);
             }
             else {
-                return new Response(view('errors.401'));
+                return new Response(view('errors.404'));
             }
         }
         else {

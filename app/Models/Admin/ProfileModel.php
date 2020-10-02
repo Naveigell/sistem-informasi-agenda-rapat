@@ -15,17 +15,16 @@ class ProfileModel extends Model {
     protected $primaryKey = 'id_user';
 
     public function getWithId($id) {
-        return $this->select(['id_user', 'username', 'email', 'role'])->where([
+        return $this->select(['id_user', 'username', 'nip', 'role'])->where([
             'id_user' => $id
         ])->first();
     }
 
-    public function updateBiodata($id, $username, $email){
+    public function updateBiodata($id, $username){
         return $this->where([
             'id_user'       => $id
         ])->update([
-            'username'      => $username,
-            'email'         => $email
+            'username'      => $username
         ]);
     }
 

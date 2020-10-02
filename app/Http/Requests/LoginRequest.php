@@ -17,8 +17,8 @@ class LoginRequest extends FormRequest
 
     public function messages() {
         return [
-            'email.required'            => 'Email tidak boleh kosong',
-            'email.min'                 => 'Panjang email minimal 6 karakter',
+            'nip.required'              => 'Nip tidak boleh kosong',
+            'nip.min'                   => 'Panjang nip minimal 6 karakter',
 
             'password.required'         => 'Password tidak boleh kosong',
             'password.min'              => 'Panjang password minimal 6 karakter'
@@ -33,7 +33,7 @@ class LoginRequest extends FormRequest
     public function rules() {
 
         return [
-            'email'     => 'required|string|min:6',
+            'nip'       => 'required|string|min:6',
             'password'  => 'required|string|min:6'
         ];
     }

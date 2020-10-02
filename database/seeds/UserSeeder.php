@@ -30,17 +30,17 @@ class UserSeeder extends Seeder {
         $user = DB::table('users');
         $role = ['admin', 'superadmin'];
 
-        for ($i = 0; $i < 40; $i++) {
+        for ($i = 0; $i < 70; $i++) {
             $separator = $this->random(['_', '.', '']);
             $nama = $i % 2 == 0 ?
                 $this->random($namaPria).$separator.$this->random($namaPria) :
                 $this->random($namaWanita).$separator.$this->random($namaWanita);
 
-            $email = strtolower(str_replace(' ', '', $nama.rand(0, 9999)."@".$this->random($prefix)));
+//            $email = strtolower(str_replace(' ', '', $nama.rand(0, 9999)."@".$this->random($prefix)));
 
             $user->insertOrIgnore([
                 'username'      => strtolower($nama),
-                'email'         => $email,
+                'nip'           => $this->nip(),
                 'password'      => Hash::make('123456'),
                 'remember_token'=> Str::random(60),
                 'role'          => $this->random($role),

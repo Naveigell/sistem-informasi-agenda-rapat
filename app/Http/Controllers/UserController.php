@@ -80,7 +80,7 @@ class UserController extends Controller {
                 $role = $request->pimpinan == null ? $user->role : 'user';
 
                 Auth::guard('user')->store($id, $user->username, $role);
-                return redirect($role.'/agenda');
+                return redirect($role.'/dashboard');
             }
 
             return $this->back('password', 'Password salah');

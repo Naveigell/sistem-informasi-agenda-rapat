@@ -46,3 +46,20 @@ body > .left-side-bar > .sub-left-side-bar > a {
     cursor: pointer;
     color: white;
 }
+
+.left-side-bar-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4px;
+}
+
+.left-side-bar-title > span {
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.left-side-bar-title > img {
+    width: 50px;
+    height: 50px;
+}

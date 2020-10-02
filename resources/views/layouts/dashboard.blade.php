@@ -9,14 +9,24 @@
     <link rel="stylesheet" href="{{ url('/css/page/layouts/header.css') }}">
     <link rel="stylesheet" href="{{ url('/css/page/layouts/dashboard.css') }}">
     <link rel="stylesheet" href="{{ url('/css/page/layouts/container.css') }}">
+      <style>
+          .logo-background {
+              background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url("{{ url('img/logo_bappeda_white.jpeg') }}") no-repeat;
+              background-size: 100% 100%;
+              object-fit: cover;
+              filter: alpha(opacity=0.1);
+          }
+      </style>
   @yield('styles')
   </head>
   <body>
       <header class="header">
           <span class="header-title">BADAN PERANCANGAN PEMBANGUNAN <br/> DAERAH PROVINSI BALI</span>
           <div class="header-account">
-              <img src="{{ url('/img/default/avatar.png') }}" alt="">
-              <span class="header-account-username">{{ session()->get('username') }}</span>
+              <i class="glyphicon-user glyphicon header-account-icon"></i>
+              <span class="header-account-username">
+                  {{ session()->get('username') }}
+              </span>
               <i style="margin-right: 10px; width: 17px; height: 17px;" class="glyphicon glyphicon-cog"></i>
               <div class="header-account-option" style="">
                   <div class="header-account-option-container">
@@ -47,8 +57,11 @@
         }
       @endphp
       <div class="left-side-bar">
-          <h2></h2>
-          <a href="/" class="">
+          <h2 class="left-side-bar-title">
+              <img src="{{ url('img/logo_bappeda.png') }}" alt="Bappeda">
+              <span>BAPPEDA</span>
+          </h2>
+          <a href="/{{ session()->get('role') }}/dashboard" class="{{ first('dashboard') ? 'active' : '' }}">
               <i class="glyphicon glyphicon-home" style="margin-right: 10px;"></i>
               Dashboard
           </a>
