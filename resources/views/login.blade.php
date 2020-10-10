@@ -12,6 +12,7 @@
           <div class="login-container" >
               <form class="login-form" method="post" action="/api/login">
                   @csrf
+                  <img id="login-logo" src="{{ url('/img/logo_bappeda.png') }}" alt="Logo">
                   <h2>Login Bappeda</h2>
                   <label>Nip</label>
                   <input id="email-input" name="nip" value="{{ old('nip') }}" type="text" placeholder="199405012015051001"/>
@@ -23,9 +24,6 @@
                           <input name="pimpinan" type="checkbox"/>
                           <span>Login pimpinan</span>
                       </div>
-{{--                      <div class="right-display">--}}
-{{--                          <a href="forget">Lupa Password?</a>--}}
-{{--                      </div>--}}
                   </div>
                   @if($errors->has('nip'))
                       <span class="error-message">{{ $errors->first('nip') }}</span>

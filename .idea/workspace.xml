@@ -2,63 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bb49978-79e2-481d-8765-ba3cde3e3a66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/DashboardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/DashboardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/User/DashboardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/logo_bappeda.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/admin/dashboard/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/dashboard/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/user/dashboard/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/Anggota/AdminsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/Anggota/AdminsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SuperAdmin/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/User/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/User/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/App/UserMiddleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/App/UserMiddleware.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/Profile/ProfileBiodataUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/Profile/ProfileBiodataUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/LoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/LoginRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/SuperAdmin/Anggota/Admin/AdminInsertRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/SuperAdmin/Anggota/Admin/AdminInsertRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/SuperAdmin/Profile/ProfileBiodataUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/SuperAdmin/Profile/ProfileBiodataUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/User/Profile/ProfileBiodataUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/User/Profile/ProfileBiodataUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Admin/ProfileModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin/ProfileModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/PimpinanModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/PimpinanModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/SuperAdmin/AdminsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/SuperAdmin/AdminsModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/SuperAdmin/ProfileModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/SuperAdmin/ProfileModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User/ProfileModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User/ProfileModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_17_090701_create_pimpinan_rapat_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_17_090701_create_pimpinan_rapat_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PimpinanRapatSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PimpinanRapatSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/page/layouts/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/page/layouts/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/page/layouts/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/page/layouts/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors/401.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/401.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors/404.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/page/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/page/login/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/root.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/root.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/agenda/agenda.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/agenda/agenda.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/anggota/admin/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/anggota/admin/admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/anggota/admin/edit/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/anggota/admin/edit/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/anggota/admin/insert/insert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/anggota/admin/insert/insert.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/anggota/pimpinan/pimpinan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/anggota/pimpinan/pimpinan.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/profile/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/profile/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/surat/surat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/surat/surat.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/agenda/agenda.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/agenda/agenda.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/admin/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/admin/admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/admin/edit/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/admin/edit/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/admin/insert/insert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/admin/insert/insert.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/detail/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/detail/detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/edit/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/edit/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/pimpinan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/anggota/pimpinan/pimpinan.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/profile/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/profile/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/superadmin/surat/surat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/superadmin/surat/surat.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/user/agenda/agenda.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/user/agenda/agenda.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/user/profile/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/user/profile/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +134,10 @@
       <workItem from="1601552600725" duration="2690000" />
       <workItem from="1601555753853" duration="365000" />
       <workItem from="1601557395863" duration="1310000" />
-      <workItem from="1601617833594" duration="3144000" />
+      <workItem from="1601617833594" duration="3365000" />
+      <workItem from="1601621210266" duration="764000" />
+      <workItem from="1602055639549" duration="1382000" />
+      <workItem from="1602245268779" duration="904000" />
     </task>
     <servers />
   </component>
