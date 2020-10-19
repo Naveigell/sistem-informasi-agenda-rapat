@@ -104,4 +104,8 @@ class AgendaRapatModel extends Model {
     public function pesertaRapat() {
         return $this->hasMany(PesertaRapatModel::class, 'peserta_rapat_id_rapat', 'id_rapat');
     }
+
+    public function arsip(){
+        return $this->hasOne(ArsipModel::class, 'id_arsip_rapat');
+    }
 }

@@ -4,6 +4,7 @@
     width: calc(100% - 270px);
     height: 100vh;
     position: absolute;
+    background: var(--color-body-primary);
 }
 
 .body-section:first-child {

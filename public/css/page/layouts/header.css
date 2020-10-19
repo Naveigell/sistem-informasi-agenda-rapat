@@ -2,24 +2,28 @@
     width: calc(100% - 251px);
     position: fixed;
     height: 120px;
-    background: red;
+    background: white;
+    box-shadow: 2px 2px 8px 2px #ddd;
     left: 251px;
     z-index: 5;
-    color: white;
+    color: #222;
     display: flex;
+    justify-content: center;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
 }
 
 .header-title {
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     font-weight: bold;
-    width: 100%;
-    bottom: 0;
-    top: 0;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-left: 22px;
 }
 
 .header > .header-account {
@@ -33,7 +37,7 @@
 }
 
 .header > .header-account:hover {
-    background: #212121;
+    /*background: #212121;*/
 }
 
 .dropdown-container {

@@ -48,7 +48,6 @@
             </tbody>
         </table>
         <br/>
-        <a class="btn btn-md button-success" href="/superadmin/agenda/insert">Tambah Agenda Baru</a>
     </div>
 
     <script src="{{ url('js/jquery.min.js') }}"></script>

@@ -21,22 +21,25 @@
   </head>
   <body>
       <header class="header">
-          <span class="header-title">BADAN PERANCANGAN PEMBANGUNAN <br/> DAERAH PROVINSI BALI</span>
-          <div class="header-account">
-              <i class="glyphicon-user glyphicon header-account-icon"></i>
-              <span class="header-account-username">
-                  {{ session()->get('username') }}
-              </span>
-              <i style="margin-right: 10px; width: 17px; height: 17px;" class="glyphicon glyphicon-cog"></i>
-              <div class="header-account-option" style="">
-                  <div class="header-account-option-container">
-                      <ul class="dropdown-menu dropdown-container">
-                          <li><a href="/{{ session()->get('role') }}/profile" style="padding-top: 10px; padding-bottom: 10px">Profil</a></li>
-                          <li><a href="/logout" style="padding-top: 10px; padding-bottom: 10px">Logout</a></li>
-                      </ul>
-                  </div>
-              </div>
+          <div class="header-container">
+              <img src="{{ url('img/logo_bappeda.png') }}" alt="Bappeda" class="bappeda-logo">
+              <span class="header-title">BADAN PERANCANGAN PEMBANGUNAN <br/> DAERAH PROVINSI BALI</span>
           </div>
+{{--          <div class="header-account">--}}
+{{--              <i class="glyphicon-user glyphicon header-account-icon"></i>--}}
+{{--              <span class="header-account-username">--}}
+{{--                  {{ session()->get('username') }}--}}
+{{--              </span>--}}
+{{--              <i style="margin-right: 10px; width: 17px; height: 17px;" class="glyphicon glyphicon-cog"></i>--}}
+{{--              <div class="header-account-option" style="">--}}
+{{--                  <div class="header-account-option-container">--}}
+{{--                      <ul class="dropdown-menu dropdown-container">--}}
+{{--                          <li><a href="/{{ session()->get('role') }}/profile" style="padding-top: 10px; padding-bottom: 10px">Profil</a></li>--}}
+{{--                          <li><a href="/logout" style="padding-top: 10px; padding-bottom: 10px">Logout</a></li>--}}
+{{--                      </ul>--}}
+{{--                  </div>--}}
+{{--              </div>--}}
+{{--          </div>--}}
       </header>
       @php
         function first($name){
@@ -57,20 +60,27 @@
         }
       @endphp
       <div class="left-side-bar">
-          <h2 class="left-side-bar-title">
-              <img src="{{ url('img/logo_bappeda.png') }}" alt="Bappeda">
-              <span>BAPPEDA</span>
-          </h2>
+          <h4 class="left-side-bar-title">
+              <span>
+                  <i class="glyphicon-user glyphicon header-account-icon"></i>
+                  <span class="header-account-username">
+                      {{ session()->get('username') }}
+                  </span>
+              </span>
+          </h4>
+          <hr class="left-side-separator">
           <a href="/{{ session()->get('role') }}/dashboard" class="{{ first('dashboard') ? 'active' : '' }}">
               <i class="glyphicon glyphicon-home" style="margin-right: 10px;"></i>
               Dashboard
           </a>
+          <hr class="left-side-separator">
           @if(session()->get('role') != 'user')
               <a class="{{ first('anggota') ? 'active' : '' }}" parent-sub="anggota" style="cursor: pointer;">
                   <i class="glyphicon glyphicon-user" style="margin-right: 10px;"></i>
                   Anggota
                   <i class="glyphicon glyphicon-triangle-bottom" style="width: 1px; height: 1px; float: right; transform: translateX(-4000%)"></i>
               </a>
+              <hr class="left-side-separator">
               <div class="sub-left-side-bar" child-sub="anggota">
                   <a href="/{{ session()->get('role') }}/anggota/admin" class="{{ second('admin') ? 'active' : '' }}">
                       Admin
@@ -84,16 +94,33 @@
               <i class="glyphicon glyphicon-calendar" style="margin-right: 10px;"></i>
               Agenda
           </a>
+          <hr class="left-side-separator">
+          <a href="/{{ session()->get('role') }}/arsip" class="{{ first('arsip') ? 'active' : '' }}">
+              <i class="glyphicon glyphicon-inbox" style="margin-right: 10px;"></i>
+              Arsip
+          </a>
+          <hr class="left-side-separator">
           @if(session()->get('role') != 'user')
               <a href="/{{ session()->get('role') }}/surat" class="{{ first('surat') ? 'active' : '' }}">
                   <i class="glyphicon glyphicon-file" style="margin-right: 10px;"></i>
                   Surat
               </a>
+              <hr class="left-side-separator">
           @endif
-          <a href="/{{ session()->get('role') }}/profile"  class="{{ first('profile') ? 'active' : '' }}">
+          <a parent-sub="profil" style="cursor: pointer;" class="{{ first('profile') ? 'active' : '' }}">
               <i class="glyphicon glyphicon-cog" style="margin-right: 10px;"></i>
               Profil
+              <i class="glyphicon glyphicon-triangle-bottom" style="width: 1px; height: 1px; float: right; transform: translateX(-4000%)"></i>
           </a>
+          <hr class="left-side-separator">
+          <div class="sub-left-side-bar" child-sub="profil">
+              <a href="/{{ session()->get('role') }}/profile" class="{{ first('profile') ? 'active' : '' }}">
+                  Biodata
+              </a>
+              <a href="/logout" class="{{ second('profile') ? 'active' : '' }}">
+                  Logout
+              </a>
+          </div>
       </div>
       <script src="{{ url('js/jquery.min.js') }}"></script>
       <script>

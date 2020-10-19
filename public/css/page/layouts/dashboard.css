@@ -1,6 +1,6 @@
 body, html {
-    /*background: var(--color-body-primary);*/
-    background: #333;
+    background: var(--color-body-primary);
+    /*background: #333;*/
 }
 
 .left-side-bar {
@@ -16,6 +16,15 @@ body, html {
 body > .left-side-bar > .sub-left-side-bar > a {
     width: 100%;
     padding-left: 28%;
+}
+
+.left-side-separator {
+    border: 0;
+    border-top: 1px solid #fff;
+    opacity: .45;
+    width: 90%;
+    background: #fff;
+    margin: 0 0 0 5%;
 }
 
 .left-side-bar > a, .left-side-bar > .sub-left-side-bar > a {
@@ -34,32 +43,40 @@ body > .left-side-bar > .sub-left-side-bar > a {
     font-weight: bold;
     /*border-left: 4px solid;*/
     /*border-color: var(--color-primary-dark);*/
-    background: #333;
-    color: white;
+    background: white;
+    color: #222;
     /*background: var(--color-body-primary);*/
     padding-left: 26px;
 }
 
 .left-side-bar > .sub-left-side-bar > a:hover, .left-side-bar > a:hover {
-    /*background: var(--color-body-primary);*/
-    background: #333;
+    background: white;
+    /*background: #333;*/
     cursor: pointer;
-    color: white;
+    color: #222;
 }
 
 .left-side-bar-title {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding-bottom: 4px;
+    padding-bottom: 24px;
+    margin-top: 27px;
+}
+
+.left-side-bar-title > span > i {
+    font-size: 25px;
+    margin-left: 20px;
 }
 
 .left-side-bar-title > span {
     font-weight: bold;
     margin-left: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.left-side-bar-title > img {
-    width: 50px;
-    height: 50px;
+.bappeda-logo {
+    width: 75px;
+    height: 75px;
 }

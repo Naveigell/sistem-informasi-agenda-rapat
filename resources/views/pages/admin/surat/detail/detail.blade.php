@@ -16,8 +16,7 @@
     </div>
 
     <div class="body-section">
-        <a href="/superadmin/surat" class="button-secondary btn btn-md">Kembali</a>
-{{--        <button class="button-success btn btn-md" data-toggle="modal" data-target=".bd-example-modal-lg">Kirim</button>--}}
+        <a href="/admin/surat" class="button-secondary btn btn-md">Kembali</a>
     </div>
 
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">

@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder {
         $this->call(PimpinanRapatSeeder::class);
         $this->call(SuratRapatSeeder::class);
         $this->call(AgendaRapatSeeder::class);
+        $this->call(ArsipRapatSeeder::class);
 //        $this->call(PesertaRapatSeeder::class);
     }
 }
