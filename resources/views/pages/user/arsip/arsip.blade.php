@@ -31,16 +31,13 @@
                     <td>{{ $a['agenda']->perihal_rapat }}</td>
                     <td>{{ $a['agenda']->rapat_id_nomor_surat }}</td>
                     <td class="col-md-3">
-                        <a href="/admin/arsip/{{ $a->id_arsip_rapat }}" class="btn btn-md button-secondary" type="button" name="button">Lihat Hasil</a>
-                        <a href="/admin/arsip/{{ $a->id_arsip_rapat }}/edit" class="btn btn-md button-warning" type="button" name="button">Edit Hasil</a>
-                        <button class="btn btn-md button-primary btn-action-hapus" type="button" hapus-id="{{ $a->id_arsip_rapat }}" name="button">Hapus</button>
+                        <a href="/user/arsip/{{ $a->id_arsip_rapat }}" class="btn btn-md button-secondary" type="button" name="button">Lihat Hasil</a>
                     </td>
                 </tr>
             @endforeach
             </tbody>
         </table>
         <br/>
-        <a class="btn btn-md button-success" href="/admin/arsip/insert">Tambah Arsip Baru</a>
     </div>
 
     <script src="{{ url('js/jquery.min.js') }}"></script>

@@ -60,6 +60,10 @@ Route::group(['prefix' => '/api/superadmin'], function (){
 // API ROUTE
 Route::group(['prefix' => '/api/admin'], function (){
 
+    Route::post('/arsip/insert', 'Api\Admin\ArsipController@insert');
+    Route::post('/arsip/update', 'Api\Admin\ArsipController@update');
+    Route::post('/arsip/delete', 'Api\Admin\ArsipController@delete');
+
     Route::post('/agenda/insert', 'Api\Admin\AgendaController@insert');
     Route::post('/agenda/update', 'Api\Admin\AgendaController@update');
     Route::post('/agenda/delete', 'Api\Admin\AgendaController@delete');
@@ -142,6 +146,12 @@ Route::group(['prefix' => '/admin', 'middleware' => 'user'], function (){
 
     Route::get('/anggota/admin', 'Api\Admin\Anggota\AdminsController@showView')->name('anggota.admin.index');
 
+    Route::get('/arsip', 'Api\Admin\ArsipController@showView')->name('arsip.index');
+    Route::get('/arsip/insert', 'Api\Admin\ArsipController@insertView')->name('arsip.insert');
+    Route::get('/arsip/{id}', 'Api\Admin\ArsipController@detailView')->name('arsip.detail');
+    Route::get('/arsip/{id}/edit', 'Api\Admin\ArsipController@editView')->name('arsip.edit');
+
+
     Route::get('/profile', 'Api\Admin\ProfileController@showView')->name('profile.index');
 });
 
@@ -152,6 +162,9 @@ Route::group(['prefix' => '/user', 'middleware' => 'user'], function (){
 
     Route::get('/agenda', 'Api\User\AgendaController@showView')->name('agenda.index');
     Route::get('/agenda/{id}', 'Api\User\AgendaController@detailView')->name('agenda.detail');
+
+    Route::get('/arsip', 'Api\User\ArsipController@showView')->name('arsip.index');
+    Route::get('/arsip/{id}', 'Api\User\ArsipController@detailView')->name('arsip.detail');
 
     Route::get('/profile', 'Api\User\ProfileController@showView')->name('profile.index');
 });
